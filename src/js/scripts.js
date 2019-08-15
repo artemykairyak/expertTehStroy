@@ -19,13 +19,44 @@ $(function(){
 
 	});
 
-		$('.header__calculate-btn, .works__calculate-btn').on('click', function(e) {
-			$('html').animate({ 
-	            scrollTop: $('.calculating').offset().top
-	        }, 1000);
-        	e.preventDefault();
+	$('.header__calculate-btn, .works__calculate-btn').on('click', function(e) {
+		scrollTo('.calculating');
+    	e.preventDefault();
 	});
-	
+
+	$('.services-item').on('click', function(e) {
+		scrollTo('.services');
+    	e.preventDefault();
+	});
+
+	$('.advantages-item').on('click', function(e) {
+		scrollTo('.advantages');
+    	e.preventDefault();
+	});
+
+	$('.deadlines-item').on('click', function(e) {
+		scrollTo('.deadlines');
+    	e.preventDefault();
+	});
+
+	$('.contacts-item').on('click', function(e) {
+		scrollTo('.contacts');
+    	e.preventDefault();
+	});
+
+	function scrollTo(destSelector) {
+		$padding = $('.header').css('padding-top');
+		$offset = $(destSelector).offset().top - parseInt($padding) - 15;
+		$('html').animate({ 
+            scrollTop: $offset
+        }, 1000);
+
+        if($('.mobile-header__burger').hasClass('active')) {
+        	
+			$('.mobile-header__burger').removeClass('active');
+			$('.mobile-menu').removeClass('active');
+        }
+	};
 
 	$('.works .table__item').on('mouseenter', function(e) {
 		$(this).addClass('hover');
@@ -44,7 +75,9 @@ $(function(){
  			$(this).attr('src', $img);
  		});
  		$('.documents__main-slide .table__item img').fadeIn();
- 		
+
+ 		$('.documents__main-slide .table__item .info__title').html($(this).parent().find('.info__title').html());
+ 		$('.documents__main-slide .table__item .info__number').html($(this).parent().find('.info__number').html());
  	});
 
 	$('.objects__slider').owlCarousel({
@@ -57,7 +90,11 @@ $(function(){
 		lazyLoad: true,
 		responsive: {
 			0: {
-				items: 1.4,
+				items: 1.3,
+				margin: 30
+			},
+			834: {
+				items: 2,
 				margin: 30
 			},
 
@@ -70,17 +107,23 @@ $(function(){
 
 	$('.documents__nav').owlCarousel({
 		navText: [$('.documents__slider-nav .slider-nav__prev'), $('.documents__slider-nav .slider-nav__next')],
-		items: 4,
 		margin: 30,
 		dots: false,
 		nav: true,
 		onInitialized : onInitSlider,
 		responsive: {
 			0: {
+				items: 1,
+				margin: 20
+			},
+			680: {
+				items: 1.6,
+				margin: 30
+			},
+			834: {
 				items: 2,
 				margin: 30
 			},
-
 			1240: {
 				items: 4,
 				margin: 30
@@ -88,46 +131,94 @@ $(function(){
 		}
 	});
 
+	$('.overlay').on('click', function() {
+		hideModal($('.modal'));
+	})
+
+	$('.modal__close').on('click', function() {
+		hideModal($(this).parent().parent());
+	});
+
+	function hideModal(modal) {
+		modal.animate({'opacity': '0'}, 200, function() {
+			modal.removeClass('active');
+			$('.overlay').hide();
+		});
+	}
+
+	function showModal(modal) {
+		$('.overlay').show();
+		modal.addClass('active');
+		modal.animate({'opacity': '1'}, 200);
+	}
+
+	$('.write-btn').on('click', function(e) {
+		showModal($('.modal__mail'));
+		e.preventDefault();
+	});
+
+	$('.call-btn').on('click', function(e) {
+		showModal($('.modal__callback'));
+		e.preventDefault();
+	});
+
+	$('.location__close').on('click', function() {
+		
+			$('.contacts').removeClass('tablet-active');
+			$('.contacts').removeClass('mobile-active');
+		
+		$(this).parent().removeClass('active');
+	})
+
 	function onInitSlider () {
 		$('.documents__main-slide .table__item img').attr('src', $('.documents__nav .table__item:first img').attr('src'));
 	}
 
 		ymaps.ready(function () {
 			var myMap = new ymaps.Map('map', {
-				center: [55.76063180708024,37.74575785974119],
+				center: [55.760851099950635, 37.75161043981168],
 				zoom: 16,
 				controls: []
 
 			}, {
 				searchControlProvider: 'yandex#search'
-			}),   
+			}),
 
-			BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div class="contacts__location">' +
-			'<h2 class="location__title">Мы находимся в Москве</h2>'	+
-			'<p class="location__worktime">Работаем с 9:00 до 22:00 <span>без выходных</span></p>' +
-			'<p class="location__phone">+7 000 000 00 00</p>' +
-			'<p class="location__phone">example@example.ru</p>' +
-			'<p class="location__address">г. Москва, ул. Москва, д.1</p></div>'
-            
-            )
-
-			
+			MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div class="placemark_layout_container"><div class="circle_layout"></div></div>');
         
 
-        var myPlacemark = new ymaps.Placemark([55.760851099950635, 37.75161043981168], {}, {
+        var myPlacemark = new ymaps.Placemark([55.760851099950635, 37.75161043981168], {
+        	  iconContent: '12'
+        }, {
             // Опции.
             // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: '/assets/img/icons/location.png',
+          iconLayout: MyIconContentLayout,
+            // Описываем фигуру активной области "Круг".
+            iconShape: {
+                type: 'Circle',
+                // Круг описывается в виде центра и радиуса
+                coordinates: [0, 0],
+                radius: 25
+            },
             // Размеры метки.
             iconImageSize: [68, 68],
-            iconImageOffset: [-12, 0],
-             balloonContentLayout: BalloonContentLayout,
+            iconImageOffset: [-12, 0]
 			});
 
 			myMap.geoObjects.add(myPlacemark);
 			myMap.behaviors.disable('scrollZoom');
+
+			myPlacemark.events.add('click', function () {
+				if($(window).width() > 996 && $(window).width() < 1240) {
+					$('.contacts').toggleClass('tablet-active');
+				} else if($(window).width() < 996) {
+					$('.contacts').toggleClass('mobile-active');
+				}
+
+				else {
+					$('.contacts__location').toggleClass('active');
+				}
+			 
+			});
 	});
 });

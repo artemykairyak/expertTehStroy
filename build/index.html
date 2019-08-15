@@ -15,8 +15,34 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+	<div class="overlay"></div>
+	<div class="modal__callback modal">
+		<div class="modal__wrapper">
+			<div class="modal__close"></div>
+			<h2 class="modal__title">Оставьте свои данные</h2>
+			<p class="modal__subtitle">И мы свяжемся с вами!</p>
+			<form action="" method="POST" name="callback-form" class="modal__form">
+				<input type="text" name="name" placeholder="Ваше имя*">
+				<input type="text" name="phone" placeholder="Телефон*">
+				<input type="submit" value="Обратный звонок" class="modal__btn btn">
+			</form>
+			<p class="modal__policy">Нажимая данную кнопку вы соглашаетесь с <a href="#">пользовательским соглашением и политикой о конфиденциальности</a></p>
+		</div>
+	</div>
+	<div class="modal__mail modal">
+		<div class="modal__wrapper">
+			<div class="modal__close"></div>
+			<h2 class="modal__title">Опишите ваш случай</h2>
+			<p class="modal__subtitle">И мы свяжемся с вами!</p>
+			<form action="" method="POST" name="mail-form" class="modal__form">
+				<input type="text" name="name" placeholder="Ваше имя*">
+				<textarea name="message" placeholder="Текст сообщения"></textarea>
+				<input type="submit" value="Обратный звонок" class="modal__btn btn">
+			</form>
+			<p class="modal__policy">Нажимая данную кнопку вы соглашаетесь с <a href="#">пользовательским соглашением и политикой о конфиденциальности</a></p>
+		</div>
+	</div>
 	<section class="header" style="background: url(img/header-bg.png) center/cover no-repeat;">
-		
 		<div class="wrapper">
 			<div class="header__mobile-header">
 				<div class="mobile-header__left">
@@ -42,12 +68,27 @@
 					<span></span>
 				</div>
 				<div class="mobile-menu">
+					<!-- <div class="mobile-header__logo"></div>
+					<div class="mobile-header__labels">
+						<a href="/" class="mobile-header__title">ЭкспертТехСтрой</a>
+						<div class="mobile-header__subtitle">Строительная экспертиза</div>
+					</div> -->
 					<ul>
-						<li><a href="#">Услуги</a></li>
-						<li><a href="#">Преимущества</a></li>
-						<li><a href="#">Сроки проведения</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li class="services-item"><a href="#">Услуги</a></li>
+						<li class="advantages-item"><a href="#">Преимущества</a></li>
+						<li class="deadlines-item"><a href="#">Сроки проведения</a></li>
+						<li class="contacts-item"><a href="#">Контакты</a></li>
 					</ul>
+					<div class="mobile-menu__added-icons">
+						<a href="mailto:" class="added-icons__email">
+							<div class="icon"></div>
+							<p>example@example.ru</p>
+						</a>
+						<a href="tel:" class="added-icons__phone">
+							<div class="icon"></div>
+							<p>+7 000 000 00 00</p>
+						</a>
+					</div>
 				</div>
 			</div>
 
@@ -59,16 +100,16 @@
 				</div>
 				<div class="top-menu__menu">
 					<ul>
-						<li>
+						<li class="services-item">
 							<a href="#" class="menu__item">Услуги</a>
 						</li>
-						<li>
+						<li class="advantages-item">
 							<a href="#" class="menu__item">Преимущества</a>
 						</li>
-						<li>
+						<li class="deadlines-item">
 							<a href="#" class="menu__item">Сроки проведения</a>
 						</li>
-						<li>
+						<li class="contacts-item">
 							<a href="#" class="menu__item">Контакты</a>
 						</li>
 					</ul>
@@ -274,7 +315,7 @@
 			<div class="questions__right-block">
 				<div class="right-block__annotation">Информацию, о наиболее частых нарушениях в сфере строительства смотрите на нашем youtube–канале</div>
 				<div class="right-block__video">
-					<a class="video__video" href="#" style="background: url(img/image.png) 0 0 / contain no-repeat;"></a>
+					<a class="video__video" href="#" style="background: url(img/image.png) 0 0 / cover no-repeat;"></a>
 					<div class="video__labels">
 						<span class="labels__author">Среда Валеева</span>
 						<span class="labels__title">Не дай себя обмануть</span>
@@ -379,8 +420,8 @@
 						<div class="item__top">
 							<img src="img/object.png" alt="">
 							<div class="item__info">
-							<span class="info__title">Название документа</span>
-							<span class="info__number">№123452643845463832</span>
+							<span class="info__title">Название документа 33</span>
+							<span class="info__number">№123</span>
 						</div>
 						</div>
 						<div class="item__bottom">
@@ -575,6 +616,7 @@
 			<p class="questions-form__policy">Нажимая данную кнопку вы соглашаетесь с <a href="#">пользовательским соглашением и политикой о конфиденциальности</a></p>
 		</form>
 		<div class="contacts__location">
+			<div class="location__close"></div>
 			<h2 class="location__title">Мы находимся в Москве</h2>	
 			<p class="location__worktime">Работаем с 9:00 до 22:00 <span>без выходных</span></p>
 			<p class="location__phone">+7 000 000 00 00</p>
