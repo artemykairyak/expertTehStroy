@@ -15,8 +15,6 @@ $(function(){
 		} else {
 			$('.header__top-menu').removeClass('header__top-menu_blue-bg');
 		}
-		
-
 	});
 
 	$('.header__calculate-btn, .works__calculate-btn').on('click', function(e) {
@@ -52,32 +50,39 @@ $(function(){
         }, 1000);
 
         if($('.mobile-header__burger').hasClass('active')) {
-        	
 			$('.mobile-header__burger').removeClass('active');
 			$('.mobile-menu').removeClass('active');
         }
 	};
 
 	$('.works .table__item').on('mouseenter', function(e) {
-		$(this).addClass('hover');
-		$(this).find('.item__info').fadeIn(300);
+		if($(window).width() > 996) {
+			$(this).addClass('hover');
+			$(this).find('.item__info').fadeIn(300);
+		}
 	});
 
 	$('.works .table__item').on('mouseleave', function(e) {
-		$(this).find('.item__info').fadeOut(300);		
-		$(this).removeClass('hover');
+		if($(window).width() > 996) {
+			$(this).find('.item__info').fadeOut(300);		
+			$(this).removeClass('hover');
+		}
 	});
 
  	$('.documents__nav .table__item img').on('click', function(e) {
- 		
- 		$img = $(this).attr('src');
- 		$('.documents__main-slide .table__item img').fadeOut(200, function() {
- 			$(this).attr('src', $img);
- 		});
- 		$('.documents__main-slide .table__item img').fadeIn();
+ 		if($(window).width() < 680) {
+ 			$('.modal__document img').attr('src', $(this).attr('src'));
+ 			showModal($('.modal__document'));
+ 		} else {
+ 			$img = $(this).attr('src');
+ 			$('.documents__main-slide .table__item img').fadeOut(200, function() {
+ 				$(this).attr('src', $img);
+ 			});
+ 			$('.documents__main-slide .table__item img').fadeIn();
 
- 		$('.documents__main-slide .table__item .info__title').html($(this).parent().find('.info__title').html());
- 		$('.documents__main-slide .table__item .info__number').html($(this).parent().find('.info__number').html());
+ 			$('.documents__main-slide .table__item .info__title').html($(this).parent().find('.info__title').html());
+ 			$('.documents__main-slide .table__item .info__number').html($(this).parent().find('.info__number').html());
+ 		} 		
  	});
 
 	$('.objects__slider').owlCarousel({
@@ -117,7 +122,7 @@ $(function(){
 				margin: 20
 			},
 			680: {
-				items: 1.6,
+				items: 2,
 				margin: 30
 			},
 			834: {
@@ -136,7 +141,7 @@ $(function(){
 	})
 
 	$('.modal__close').on('click', function() {
-		hideModal($(this).parent().parent());
+		hideModal($(this).closest('.modal'));
 	});
 
 	function hideModal(modal) {
@@ -162,13 +167,42 @@ $(function(){
 		e.preventDefault();
 	});
 
+	$('.works .item__info ul').each(function() {
+		if($(this).children().length === 1) {
+			$(this).parent().addClass('disable-marker')
+		}
+	});
+
+	$('.works .item__head').on('click', function() {
+		if($(window).width() < 996) {
+			$(this).parent().toggleClass('hover');
+			if($(this).parent().hasClass('hover')) {
+				$(this).parent().find('.item__info').fadeIn(300);
+			} else {
+				$(this).parent().find('.item__info').fadeOut(300);
+			}
+		}
+	});
+
+	$('.item__info .info__close').on('click', function() {
+		$(this).closest('.table__item').removeClass('hover');
+		$(this).closest('.item__info').fadeOut(300);
+	})	
+
 	$('.location__close').on('click', function() {
-		
 			$('.contacts').removeClass('tablet-active');
 			$('.contacts').removeClass('mobile-active');
-		
 		$(this).parent().removeClass('active');
-	})
+	});
+
+	if($(window).width() > 996 && $(window).width() < 1355) {
+		$('.contacts').addClass('tablet-active');
+		} else if($(window).width() < 996) {
+			$('.contacts').addClass('mobile-active');
+		} else {
+			$('.contacts').removeClass('tablet-active');
+			$('.contacts').removeClass('mobile-active');
+		}
 
 	function onInitSlider () {
 		$('.documents__main-slide .table__item img').attr('src', $('.documents__nav .table__item:first img').attr('src'));
@@ -207,9 +241,10 @@ $(function(){
 
 			myMap.geoObjects.add(myPlacemark);
 			myMap.behaviors.disable('scrollZoom');
+			myMap.behaviors.disable('drag');
 
 			myPlacemark.events.add('click', function () {
-				if($(window).width() > 996 && $(window).width() < 1240) {
+				if($(window).width() > 996 && $(window).width() < 1355) {
 					$('.contacts').toggleClass('tablet-active');
 				} else if($(window).width() < 996) {
 					$('.contacts').toggleClass('mobile-active');
