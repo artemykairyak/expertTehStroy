@@ -206,6 +206,8 @@ $(function(){
 
 	function onInitSlider () {
 		$('.documents__main-slide .table__item img').attr('src', $('.documents__nav .table__item:first img').attr('src'));
+		$('.documents__main-slide .info__title').html($('.documents__nav .table__item:first .info__title').html());
+		$('.documents__main-slide .info__number').html($('.documents__nav .table__item:first .info__number').html());
 	}
 
 		ymaps.ready(function () {
