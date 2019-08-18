@@ -115,6 +115,7 @@ $(function(){
 		margin: 30,
 		dots: false,
 		nav: true,
+		lazyLoad: true,
 		onInitialized : onInitSlider,
 		responsive: {
 			0: {

@@ -6,6 +6,8 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	uglyfly = require('gulp-uglyfly'),
 	imagemin = require('gulp-imagemin'),
+	imageminJpegRecompress = require('imagemin-jpeg-recompress'),
+	imageminSvgo = require('imagemin-svgo'),
 	autoprefixer = require('gulp-autoprefixer'),
 	del = require('del'),
 	plumber = require('gulp-plumber'),
@@ -69,7 +71,22 @@ gulp.task('buildHtml', function(){
 //img
 gulp.task('imgmin', function() {
   return gulp.src('src/img/**/*')
-  .pipe(imagemin())
+  .pipe(imagemin([
+            imageminJpegRecompress({
+            	method: 'smallfry',
+                quality:'high'
+              }),
+            imagemin.optipng({optimizationLevel: 5}),
+            imageminSvgo({
+                plugins: [
+                    {removeDimensions: true},
+                    {removeAttrs: true},
+                    {removeElementsByAttr: true},
+                    {removeStyleElement: true},
+                    {removeViewBox: false}
+                ]
+            })
+        ]))
   .pipe(gulp.dest('build/img'))
   .pipe(reload({stream: true}));
 });
@@ -104,7 +121,7 @@ gulp.task('webserver', function () {
     gulp.watch('src/sass/*.scss', gulp.series('buildCss'));
     gulp.watch('src/js/*.js', gulp.series('buildJs'));
     gulp.watch('src/fonts/*', gulp.series('buildFonts'));
-    gulp.watch('src/img/*.html', gulp.series('imgmin'));
+    gulp.watch('src/img/**/*', gulp.series('imgmin'));
     gulp.watch('src/vendors/**', gulp.series('vendors'));
 });
 
