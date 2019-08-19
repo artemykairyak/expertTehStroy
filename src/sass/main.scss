@@ -52,19 +52,75 @@ a {
 	}
 }
 
+.modal::-webkit-scrollbar-button {
+    background: #4F4F4F;
+    width:7px;
+    height:0px;
+}
+
+.modal::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background-color:#4F4F4F;
+
+}
+
+.modal::-webkit-scrollbar-thumb:hover{
+    background-color: $accent;
+}
+
+.modal::-webkit-resizer{
+    width:4px;
+    height:0px;
+}
+
+.modal::-webkit-scrollbar{
+    width: 6px;
+}
+
 .modal {
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 1000;
+	z-index: 901;
 	background: #fff;
 	width: 27%;
 	display: none;
+	max-height: 100vh;
 
 	&.active {
 		display: block;
 		opacity: 0;
+	}
+
+	&__success {
+		.modal__wrapper {
+			padding: 13px 30px 120px;
+		}
+	}
+
+	&-success {
+		&__icon {
+			width: 95px;
+			height: 95px;
+			background: url(img/icons/success.png) 0 0 / contain no-repeat;
+			margin: 0 auto;
+			position: relative;
+			margin-bottom: 12%;
+
+			&:before {
+				content: 'done';
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: #BDBDBD;
+				font-size: 12px;
+				margin-top: -14px;
+			}
+		}
 	}
 
 	&__document {
@@ -74,6 +130,32 @@ a {
 		img {
 			width: 100%;
 		}
+	}
+
+	&__policy {
+		width: 50%;
+		height: 80vh;
+		overflow-y: auto; 
+		padding: 30px;
+		z-index: 902;
+
+		.modal__close {
+			top: 30px;
+		}
+
+		h2 {
+			color: #4F4F4F;
+			font-size: 24px;
+			margin-bottom: 30px;
+			line-height: 28px;
+		}
+
+		p {
+			color: #4F4F4F;
+			font-size: 16px;
+			line-height: 19px;
+		}
+		
 	}
 
 	&__close {
@@ -167,7 +249,7 @@ a {
 		cursor: pointer;
 	}
 
-	&__policy {
+	&__policy-link {
 		font-size: 14px;
 		line-height: 16px;
 		color:  #BDBDBD;
@@ -350,6 +432,30 @@ a {
 			background: $blue;
 		}
 		
+	}
+
+	.more-btn {
+		font-weight: 500;
+		font-size: 24px;
+		color: #fff;
+		transition: all 0.3s ease;
+		
+		position: relative;
+		margin-left: 5%;
+
+		&:hover {
+			margin-left: 5.5%;
+		}
+
+		&:after {
+			content: '';
+			margin-left: 25px;
+			display: inline-block;
+			transform: translateY(25%);
+			width: 30px;
+			height: 30px;
+			background: url(img/icons/arrow-right.png) 0 0 / contain no-repeat;
+		}
 	}
 
 	.mobile-header {
@@ -987,10 +1093,6 @@ a {
 		&__item {
 			width: 24%;
 			position: relative;
-
-			&:first-child {
-				padding-bottom: 100px;
-			}
 		}
 	}
 
@@ -1021,33 +1123,6 @@ a {
 			font-size: 20px;
 			line-height: 36px;
 			color: #000;
-		}
-	}
-
-	.more-btn {
-		font-weight: 500;
-		font-size: 24px;
-		line-height: 36px;
-		color: $blue;
-		transition: all 0.3s ease;
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		padding-right: 37px;
-
-		&:hover {
-			transform: translateX(10px);
-		}
-
-		&:after {
-			content: '';
-			position: absolute;
-			right: 0;
-			top: 50%;
-			transform: translateY(-50%);
-			width: 30px;
-			height: 30px;
-			background: url(img/icons/arrow-right.png) 0 0 / contain no-repeat;
 		}
 	}
 }
@@ -1372,18 +1447,21 @@ textarea::-webkit-input-placeholder {
 		display: -ms-flex;
 		display: -o-flex;
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
 		flex-wrap: wrap;
 
 		p {
 			width: 30%;
+			&:first-child {
+				margin-right: 90px;
+			}
 
 			& * {
 				width: 100%;
 				margin-bottom: 30px;
 			}
 
-			.select {
+			/*.select {
 				width: 100%;
 				display: inline-block;
 				position: relative;
@@ -1395,10 +1473,10 @@ textarea::-webkit-input-placeholder {
 				    width: 100%;				    
 				    background: none;
 				    border: 1px solid rgba(31, 42, 87, 0.11);
-				    -webkit-appearance: none;/* Chrome */
-				    -moz-appearance: none;/* Firefox */
-				    appearance: none;/* убираем дефолнтные стрелочки */
-				    font-family: inherit;/* наследует от родителя */
+				    -webkit-appearance: none;
+				    -moz-appearance: none;
+				    appearance: none;
+				    font-family: inherit;
 				   	font-size: 24px;
 				   	padding: 0 30px;
 				   	height: 60px;
@@ -1419,15 +1497,32 @@ textarea::-webkit-input-placeholder {
 				    z-index: 1;
 				    transform: translateY(-50%);
 				}
-			}
+			}*/
 
 			input[name="email"], .select:last-child {
 				margin-bottom: 0;
 			}			
 		}
 
+		.second-col {
+			textarea {
+				height: 150px;
+			}
+		}
+
 		.bottom-inputs {
 			margin-top: 30px;
+			width: 100%;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			-webkit-flex-direction: column;
+			-moz-flex-direction: column;
+			-ms-flex-direction: column;
+			-o-flex-direction: column;
+			flex-direction: column;
 
 			input[id="files"] {
 				display: none;
@@ -1443,6 +1538,8 @@ textarea::-webkit-input-placeholder {
 				position: relative;
 				padding-left: 27px;
 				cursor: pointer;
+				margin-bottom: 0;
+				width: auto;
 
 				&:before {
 					content: '';
@@ -1457,7 +1554,7 @@ textarea::-webkit-input-placeholder {
 			}
 
 			input[name="calculate-btn"] {
-				width: auto;
+				width: 371px;
 				padding: 20px 70px;
 				margin-top: 60px;
 				border: none;
@@ -1598,6 +1695,11 @@ textarea::-webkit-input-placeholder {
 			img {
 				margin-bottom: 0;
 			}
+
+			&.placeholder {
+				cursor: default;
+				visibility: hidden;
+			}
 		}
 	}
 }
@@ -1638,11 +1740,6 @@ textarea::-webkit-input-placeholder {
 		}
 	}
 
-	.slider-nav {
-		
-		
-	}
-
 	.owl-nav {
 		margin-top: 60px;
 		text-align: right;
@@ -1665,8 +1762,6 @@ textarea::-webkit-input-placeholder {
 
 .contacts {
 	position: relative;
-
-
 
 	.questions-form {
 		position: absolute;
@@ -1862,6 +1957,7 @@ textarea::-webkit-input-placeholder {
 		font-family: $fira;
 		font-size: 24px;
 		color: $blue;
+		display: none;
 	}
 }
 
@@ -1968,7 +2064,7 @@ textarea::-webkit-input-placeholder {
 
 /* MEDIA */
 
-@media screen and (max-height: 730px) and (max-width: 1400px)  {
+@media screen and (max-height: 760px) and (max-width: 1600px)  {
 	.header__content {
 		margin-top: 5%;
 		height: 50vh;
@@ -1981,17 +2077,26 @@ textarea::-webkit-input-placeholder {
 		p {
 			font-size: 28px;
 		}
-
-
 	}
 
 	.header__other-buttons {
+		.call-btn, .write-btn {
+			.icon {
+				width: 25px;
+				height: 25px;
+			}
+		}
 		.call-btn {
 			bottom: 0;
+			padding: 15px 50px 15px 17px;
+			transform: translateX(227px);
 		}
 
 		.write-btn {
 			bottom: 120px;
+			padding: 15px 50px 15px 17px;
+			transform: translateX(207px);
+			bottom: 75px;
 		}
 	}
 
@@ -2011,8 +2116,17 @@ textarea::-webkit-input-placeholder {
 		font-size: 24px;
 	}
 
-	.services .item__text, .questions__list li {
+	.services .item__title {
+		font-size: 30px;
+	}
+
+	.services .item__text {
 		font-size: 16px;
+	}
+
+	.questions__list li {
+		font-size: 16px;
+		line-height: 28px;
 	}
 
 	.questions__list li {
@@ -2021,11 +2135,19 @@ textarea::-webkit-input-placeholder {
 	}
 
 	.questions {
-		padding: 0 0 60px;
+		padding: 0 0 130px;
+	}
+
+	.questions .labels__title {
+		font-size: 16px;
 	}
 
 	.calculating {
 		padding: 60px 0 100px;
+	}
+
+	.deadlines {
+		clear: both;
 	}
 
 	.deadlines .item__text {
@@ -2042,6 +2164,7 @@ textarea::-webkit-input-placeholder {
 
 	.advantages-table .item__text {
 		font-size: 16px;
+		line-height: 28px;
 	}
 
 	.works .item__head p {
@@ -2056,6 +2179,17 @@ textarea::-webkit-input-placeholder {
 
 	.contacts__subscribe {
 		padding: 120px 18px 37px 43px;
+		
+		a {
+			position: relative;
+			padding-bottom: 20px;
+
+			&:after {
+				position: absolute;
+				right: -5px;
+				bottom: 0;
+			}
+		}
 	}
 
 	.contacts .questions-form textarea {
@@ -2299,8 +2433,16 @@ textarea::-webkit-input-placeholder {
 		float: none;
 	}
 
+	.calculating__form {
+		justify-content: space-between;
+	}
+
 	.calculating__form p {
 		width: 47%;
+	}
+
+	.calculating__form p:first-child {
+		margin-right: 0;
 	}
 
 	.calculating__form .third-col {
@@ -2335,8 +2477,6 @@ textarea::-webkit-input-placeholder {
 	.contacts__subscribe {
 		left: 5%;
 	}
-
-
 }
 
 @media screen and (max-width: 1030px) {
@@ -2350,6 +2490,7 @@ textarea::-webkit-input-placeholder {
 
 	.works .table__item {
 		width: 47%;
+		margin-right: 0;
 	}
 
 	.advantages__text {
@@ -2402,6 +2543,13 @@ textarea::-webkit-input-placeholder {
 
 	.header {
 		padding-top: 105px;
+
+		.more-btn {
+			display: block;
+			width: 350px;
+			margin-top: 30px;
+			margin-left: 35px;
+		}
 	}
 	.header__top-menu {
 		display: none;
@@ -2479,7 +2627,6 @@ textarea::-webkit-input-placeholder {
 
 	.footer__item:last-child {
 		width: 35%;
-
 	}
 
 	.footer__item:last-child .asap-logo {
@@ -2492,9 +2639,17 @@ textarea::-webkit-input-placeholder {
 		width: 80%;
 	}
 
-	.header__content {
-	
+	.header .more-btn {
+		width: 100%;
+		margin: 20px auto 0;
+		text-align: center;
 
+		&:hover {
+			margin: 20px auto 0;
+		}
+	}
+
+	.header__content {
 		h1 {
 			font-size: 42px;
 			line-height: 1.5;
@@ -2514,23 +2669,14 @@ textarea::-webkit-input-placeholder {
 
 	.header__other-buttons {
 		.write-btn  {
-			/*left: 0;
-			right: auto;
-			transform: translateX(-180px);
-			padding: 25px 27px 25px 30px;*/
 			bottom: 15vh;
 			padding: 20px 20px 20px 20px;
 			font-size: 18px;
 			transform: translateX(145px);
 
 			.icon {
-			/*	order: 2;*/
-				/*margin-right: 0;
-				margin-left: 30px;*/
 				width: 15px;
 				height: 18px;
-
-
 			}
 		} 
 
@@ -2599,7 +2745,6 @@ textarea::-webkit-input-placeholder {
 		right: 0;
 		padding: 50px 20px 30px;
 		top: 0;
-
 	}
 
 	.contacts .questions-form h2 {
@@ -2785,7 +2930,6 @@ textarea::-webkit-input-placeholder {
 		-ms-flex-wrap: wrap;
 		-o-flex-wrap: wrap;
 		flex-wrap: wrap;
-
 	}
 
 	.footer__item {
@@ -2803,11 +2947,19 @@ textarea::-webkit-input-placeholder {
 		.asap-logo {
 			margin-left: 25%;
 		}
-
 	}
 }
 
 @media screen and (max-width: 430px) {
+	.header .more-btn {
+		font-size: 18px;
+
+		&:after {
+			width: 20px;
+			height: 20px;
+			margin-left: 15px;
+		}
+	}
 
 	.mobile-menu {
 		
@@ -2857,7 +3009,6 @@ textarea::-webkit-input-placeholder {
 
 			a {
 				display: block;
-				
 
 				&:first-child {
 					margin-bottom: 20px;
@@ -2867,7 +3018,6 @@ textarea::-webkit-input-placeholder {
 					&:after {
 						display: none;
 					}
-					
 				}
 			}
 
@@ -2933,6 +3083,13 @@ textarea::-webkit-input-placeholder {
 
 		input[type="text"] {
 			height: 40px;
+		}
+
+		&-success {
+			&__icon {
+				width: 60px;
+				height: 60px;
+			}
 		}
 	}
 	.header {
@@ -3000,11 +3157,11 @@ textarea::-webkit-input-placeholder {
 	}
 
 	.header__other-buttons .write-btn {
-		bottom: 13%;
+		bottom: 80px;
 	}
 
 	.works {
-		padding: 37px 0;
+		padding: 70px 0;
 	}
 
 	.title {
@@ -3025,6 +3182,10 @@ textarea::-webkit-input-placeholder {
 			margin-left: 15px;
 			width: 80%;
 		}
+	}
+
+	.works__calculate-btn {
+		font-size: 16px;
 	}
 
 	.works .item__info ul li {
@@ -3072,7 +3233,7 @@ textarea::-webkit-input-placeholder {
 	}
 
 	.services {
-		padding: 62px 0;
+		padding: 70px 0;
 	}
 
 	.services__title  {
@@ -3097,7 +3258,11 @@ textarea::-webkit-input-placeholder {
 	}
 
 	.questions .wrapper {
-		padding-bottom: 750px;
+		padding-bottom: 180%;
+	}
+
+	.questions__title {
+		margin-bottom: 40px;
 	}
 
 	.questions .right-block__annotation {
@@ -3114,14 +3279,14 @@ textarea::-webkit-input-placeholder {
 		padding: 65px 0 55px;  
 	}
 
+	.deadlines .item__text {
+		font-size: 16px;
+		line-height: 19px;
+	}
+
 	.deadlines .item__title {
 		font-size: 20px;
 		line-height: 24px;
-	}
-
-	.deadlines .table__item span {
-		font-size: 16px;
-		line-height: 19px;
 	}
 
 	.deadlines .table__item:nth-child(1):before, 
@@ -3135,7 +3300,7 @@ textarea::-webkit-input-placeholder {
 	}
 
 	.calculating {
-		padding: 100px 0 92px; 
+		padding: 70px 0 70px; 
 	}
 
 	.calculating__title {
@@ -3175,10 +3340,16 @@ textarea::-webkit-input-placeholder {
 		padding: 0 10px 0 13px;
 		font-size: 16px;
 		line-height: 1.2;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
 	}
 	
 	.objects {
-		padding-bottom: 40%;
+		padding-top: 70px;
+		padding-bottom: 70px;
 	}
 
 	.objects__title {
@@ -3233,6 +3404,7 @@ textarea::-webkit-input-placeholder {
 	.contacts.mobile-active {
 		.contacts__location {
 			top: 60%;
+			display: block;
 		}
 
 		.contacts__subscribe {
