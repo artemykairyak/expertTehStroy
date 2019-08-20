@@ -12,6 +12,7 @@ ul {
 
 html {
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 body {
@@ -29,6 +30,7 @@ section {
   width: 100%;
   position: relative;
   background: #fff;
+  overflow-x: hidden;
 }
 
 a {
@@ -91,10 +93,6 @@ a {
 .modal.active {
   display: block;
   opacity: 0;
-}
-
-.modal__success .modal__wrapper {
-  padding: 13px 30px 120px;
 }
 
 .modal-success__icon {
@@ -590,7 +588,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 27%;
+  width: 25%;
 }
 
 .header .top-menu__right-side * {
@@ -605,6 +603,13 @@ a {
 
 .header .top-menu__right-side a:hover p {
   border-bottom: 1px solid #fff;
+}
+
+.header .top-menu__right-side .right-side__youtube {
+  width: 24px;
+  height: 15px;
+  background: url("img/icons/video-play.png") 0 0/contain no-repeat;
+  margin-bottom: 2px;
 }
 
 .header .top-menu__right-side p {
@@ -969,6 +974,7 @@ a {
   line-height: 36px;
   color: #000;
   width: 65%;
+  display: inline-block;
 }
 
 .advantages-table {
@@ -1344,6 +1350,10 @@ textarea::-webkit-input-placeholder {
   font-weight: normal;
 }
 
+input.error {
+  border: 1px solid red;
+}
+
 .calculating {
   padding: 130px 0 100px;
 }
@@ -1356,6 +1366,18 @@ textarea::-webkit-input-placeholder {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+
+.calculating__form * {
+  transition: all 0.3s ease;
+}
+
+.calculating__form .files-counter {
+  color: #BDBDBD;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 27px;
 }
 
 .calculating__form p {
@@ -1673,6 +1695,19 @@ textarea::-webkit-input-placeholder {
   z-index: 4;
   background: #fff;
   padding: 74px 50px 50px;
+  transition: all 0.3s ease;
+}
+
+.contacts .questions-form * {
+  transition: all 0.3s ease;
+}
+
+.contacts .questions-form__subtitle {
+  font-size: 16px;
+  line-height: 19px;
+  color: #1F2A57;
+  width: 80%;
+  margin-bottom: 50px;
 }
 
 .contacts .questions-form h2 {
@@ -1682,12 +1717,12 @@ textarea::-webkit-input-placeholder {
   font-size: 48px;
   line-height: 58px;
   color: #1F2A57;
-  margin-bottom: 48px;
+  margin-bottom: 20px;
 }
 
 .contacts .questions-form input[name="name"] {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .contacts .questions-form input[name="question-btn"] {
@@ -1704,7 +1739,7 @@ textarea::-webkit-input-placeholder {
 .contacts .questions-form textarea {
   width: 100%;
   padding: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   height: 300px;
 }
 
@@ -1956,6 +1991,10 @@ textarea::-webkit-input-placeholder {
 /* MEDIA */
 
 @media screen and (max-width: 1680px) {
+  .modal {
+    width: 33%;
+  }
+
   .header .top-menu__right-side p {
     display: none;
   }

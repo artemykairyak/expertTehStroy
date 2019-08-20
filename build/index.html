@@ -16,7 +16,7 @@
 </head>
 <body>
 	<div class="overlay"></div>
-	<div class="modal__success modal active" style="opacity: 1;">
+	<div class="modal__success modal">
 		<div class="modal__wrapper">		
 			<div class="modal__close"></div>
 			<div class="modal-success__icon"></div>
@@ -152,12 +152,13 @@
 				<div class="top-menu__right-side">
 					<a href="tel:" class="right-side__phone">
 						<div class="icon"></div>
-						<p>+7 000 000 00 00</p>
+						<p>+7 927 222 45 75</p>
 					</a>
 					<a href="mailto:" class="right-side__email">
 						<div class="icon"></div>
-						<p>example@example.ru</p>
+						<p>info@e-ts.ru</p>
 					</a>
+					<a href="#" class="right-side__youtube"></a>
 				</div>
 			</div>
 			<div class="header__content">
@@ -402,6 +403,7 @@
 				<p class="bottom-inputs">
 					<label class="attach-btn" for="files">Прикрепить документы</label>
 					<input id="files" type="file" multiple name="files">
+					<span class="files-counter"></span>
 					<input type="submit" name="calculate-btn" value="Рассчитать стоимость" class="btn">
 				</p>
 			</form>
@@ -631,6 +633,7 @@
 	<section class="contacts">
 		<form action="" method="POST" class="questions-form">
 			<h2>Остались вопросы?</h2>
+			<p class="questions-form__subtitle">Задайте их нашему специалисту и получите ответ в течение 15 минут</p>
 			<input type="text" name="name" placeholder="Ваше имя">
 			<textarea name="message" id="" placeholder="Тема обращения"></textarea>
 			<input type="submit" name="question-btn" value="Задать вопрос" class="btn">

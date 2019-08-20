@@ -15,6 +15,7 @@ ul {
 
 html {
     font-size: 18px;
+    overflow-x: hidden;
 }
 
 body {
@@ -32,6 +33,7 @@ section {
 	width: 100%;
 	position: relative;
 	background: #fff;
+	overflow-x: hidden;
 }
 
 a {
@@ -94,12 +96,6 @@ a {
 	&.active {
 		display: block;
 		opacity: 0;
-	}
-
-	&__success {
-		.modal__wrapper {
-			padding: 13px 30px 120px;
-		}
 	}
 
 	&-success {
@@ -619,7 +615,7 @@ a {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			width: 27%;
+			width: 25%;
 
 			& * {
 				transition: all 0.3s ease; 
@@ -638,6 +634,13 @@ a {
 					}
 					
 				}
+			}
+
+			.right-side__youtube {
+				width: 24px;
+				height: 15px;
+				background: url(img/icons/video-play.png) 0 0 / contain no-repeat;
+				margin-bottom: 2px;
 			}
 
 			p {
@@ -1032,6 +1035,7 @@ a {
 		line-height: 36px;
 		color: #000;
 		width: 65%;
+		display: inline-block;
 	}
 }
 
@@ -1438,6 +1442,10 @@ textarea::-webkit-input-placeholder {
 	font-weight: normal;
 }
 
+input.error {
+	border: 1px solid red;
+}
+
 .calculating {
 	padding: 130px 0 100px;
 	
@@ -1449,6 +1457,18 @@ textarea::-webkit-input-placeholder {
 		display: flex;
 		justify-content: flex-start;
 		flex-wrap: wrap;
+		transition: all 0.3s ease;
+
+		& * {
+			transition: all 0.3s ease;
+		}
+
+		.files-counter {
+			color: #BDBDBD;
+			font-size: 18px;
+			margin-top: 10px;
+			margin-left: 27px;
+		}
 
 		p {
 			width: 30%;
@@ -1771,6 +1791,19 @@ textarea::-webkit-input-placeholder {
 		z-index: 4;
 		background: #fff;
 		padding: 74px 50px 50px;
+		transition: all 0.3s ease;
+
+		& * {
+			transition: all 0.3s ease;
+		}
+
+		&__subtitle {
+			font-size: 16px;
+			line-height: 19px;
+			color: $blue;
+			width: 80%;
+			margin-bottom: 50px;
+		}
 		
 		h2 {
 			font-family: $fira;
@@ -1779,12 +1812,12 @@ textarea::-webkit-input-placeholder {
 			font-size: 48px;
 			line-height: 58px;
 			color: $blue;
-			margin-bottom: 48px;
+			margin-bottom: 20px;
 		}
 
 		input[name="name"] {
 			width: 100%;
-			margin-bottom: 30px;
+			margin-bottom: 20px;
 		}
 
 		input[name="question-btn"] {
@@ -1801,7 +1834,7 @@ textarea::-webkit-input-placeholder {
 		textarea {
 			width: 100%;
 			padding: 30px;
-			margin-bottom: 30px;
+			margin-bottom: 40px;
 			height: 300px;
 		}
 
@@ -2235,6 +2268,9 @@ textarea::-webkit-input-placeholder {
 }
 
 @media screen and (max-width: 1680px) {
+	.modal {
+		width: 33%;
+	}
 	.header .top-menu__right-side p {
 		display: none;
 	}

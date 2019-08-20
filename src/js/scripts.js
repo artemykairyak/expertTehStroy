@@ -4,6 +4,22 @@ $(function(){
 		$('.mobile-menu').toggleClass('active');
 	});
 
+	$('#files').on('change', function(){
+    	switch(this.files.length.toString().slice(-1)) {
+		  case '1':  
+		     $('.files-counter').html('Выбран ' + this.files.length + ' файл');
+		    break;
+		  case '2': 
+		  case '3': 
+		  case '4':  
+		     $('.files-counter').html('Выбрано ' + this.files.length + ' файла');
+		    break;
+		  default:
+		    $('.files-counter').html('Выбрано ' + this.files.length + ' файлов');
+		    break;
+		}
+	});
+
 	$(window).on('scroll', function() {
 		if($('.header__mobile-header').offset().top > 0) {
 			$('.header__mobile-header').addClass('header__mobile-header_blue-bg');
