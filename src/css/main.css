@@ -216,7 +216,7 @@ a {
 
 .modal__form input {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .modal__form input:last-child {
@@ -1716,7 +1716,8 @@ input.error {
   margin-bottom: 20px;
 }
 
-.contacts .questions-form input[name="name"] {
+.contacts .questions-form input[name="name"],
+.contacts .questions-form input[name="phone"] {
   width: 100%;
   margin-bottom: 20px;
 }
@@ -1736,7 +1737,7 @@ input.error {
   width: 100%;
   padding: 30px;
   margin-bottom: 40px;
-  height: 300px;
+  height: 160px;
 }
 
 .contacts .questions-form__policy {
@@ -2857,6 +2858,14 @@ input.error {
 }
 
 @media screen and (max-width: 430px) {
+  .modal__form textarea {
+    height: 90px;
+  }
+
+  .modal__btn {
+    height: 50px;
+  }
+
   .header .more-btn {
     font-size: 18px;
   }

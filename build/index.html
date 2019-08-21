@@ -54,11 +54,11 @@
 		<div class="modal__wrapper">
 			<div class="modal__close"></div>
 			<h2 class="modal__title">Оставьте свои данные</h2>
-			<p class="modal__subtitle">И мы свяжемся с вами!</p>
+			<p class="modal__subtitle">И специалист свяжется с вами в течение 15 минут</p>
 			<form action="" method="POST" name="callback-form" class="modal__form">
 				<input type="text" name="name" placeholder="Ваше имя*">
 				<input type="text" name="phone" placeholder="Телефон*">
-				<input type="submit" value="Обратный звонок" class="modal__btn btn">
+				<input type="submit" value="Перезвоните мне" class="modal__btn btn">
 			</form>
 			<p class="modal__policy-link">Нажимая данную кнопку вы соглашаетесь с <a href="#">пользовательским соглашением и политикой о конфиденциальности</a></p>
 		</div>
@@ -66,12 +66,13 @@
 	<div class="modal__mail modal">
 		<div class="modal__wrapper">
 			<div class="modal__close"></div>
-			<h2 class="modal__title">Опишите ваш случай</h2>
-			<p class="modal__subtitle">И мы свяжемся с вами!</p>
+			<h2 class="modal__title">Оставьте сообщение</h2>
+			<p class="modal__subtitle">и мы оперативно ответим вам на email</p>
 			<form action="" method="POST" name="mail-form" class="modal__form">
 				<input type="text" name="name" placeholder="Ваше имя*">
+				<input type="text" name="email" placeholder="Ваш email*">
 				<textarea name="message" placeholder="Текст сообщения"></textarea>
-				<input type="submit" value="Обратный звонок" class="modal__btn btn">
+				<input type="submit" value="Получить ответ" class="modal__btn btn">
 			</form>
 			<p class="modal__policy-link">Нажимая данную кнопку вы соглашаетесь с <a href="#">пользовательским соглашением и политикой о конфиденциальности</a></p>
 		</div>
@@ -635,7 +636,8 @@
 			<h2>Остались вопросы?</h2>
 			<p class="questions-form__subtitle">Задайте их нашему специалисту и получите ответ в течение 15 минут</p>
 			<input type="text" name="name" placeholder="Ваше имя">
-			<textarea name="message" id="" placeholder="Тема обращения"></textarea>
+			<input type="text" name="phone" placeholder="Телефон">
+			<textarea name="message" id="" placeholder="Сообщение"></textarea>
 			<input type="submit" name="question-btn" value="Задать вопрос" class="btn">
 			<p class="questions-form__policy">Нажимая данную кнопку вы соглашаетесь с <a href="#">пользовательским соглашением и политикой о конфиденциальности</a></p>
 		</form>
