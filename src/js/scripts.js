@@ -241,6 +241,7 @@ $(function(){
 		myMap.geoObjects.add(myPlacemark);
 		myMap.behaviors.disable('scrollZoom');
 		myMap.behaviors.disable('drag');
+		myMap.container.fitToViewport();
 
 		myPlacemark.events.add('click', function () {
 			if($(window).width() > 996 && $(window).width() < 1355) {

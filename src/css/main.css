@@ -30,7 +30,6 @@ section {
   width: 100%;
   position: relative;
   background: #fff;
-  overflow-x: hidden;
 }
 
 a {
@@ -423,15 +422,11 @@ a {
   margin-left: 5%;
 }
 
-.header .more-btn:hover {
-  margin-left: 5.5%;
-}
-
 .header .more-btn:after {
   content: '';
   margin-left: 25px;
   display: inline-block;
-  transform: translateY(25%);
+  transform: translateY(25%) rotate(90deg);
   width: 30px;
   height: 30px;
   background: url("img/icons/arrow-right.png") 0 0/contain no-repeat;
@@ -1378,6 +1373,7 @@ input.error {
   font-size: 18px;
   margin-top: 10px;
   margin-left: 27px;
+  margin-bottom: 0;
 }
 
 .calculating__form p {
@@ -2025,11 +2021,15 @@ input.error {
     display: block;
     opacity: 1;
   }
+
+  .questions__right-block {
+    width: 70%;
+  }
 }
 
-@media screen and (max-height: 760px) and (max-width: 1600px) {
+@media screen and (max-height: 730px) and (max-width: 1600px) {
   .header__content {
-    margin-top: 5%;
+    margin-top: 10% !important;
     height: 50vh;
   }
 
@@ -2055,7 +2055,7 @@ input.error {
   }
 
   .header__other-buttons .write-btn {
-    bottom: 120px;
+    bottom: 80px !important;
     padding: 15px 50px 15px 17px;
     transform: translateX(207px);
     bottom: 75px;
@@ -2202,6 +2202,7 @@ input.error {
 
   .header__content {
     width: 100%;
+    margin-top: 20%;
   }
 
   .header__content h1 {
@@ -2213,7 +2214,7 @@ input.error {
   }
 
   .header .top-menu__menu {
-    width: 50%;
+    width: 45%;
   }
 
   .header__other-buttons .call-btn {
@@ -2259,19 +2260,15 @@ input.error {
     width: 100%;
   }
 
-  .questions__right-block {
-    width: 65%;
-  }
-
   .contacts__location {
-    left: 5%;
-    right: auto;
-    top: 60%;
+    /*left: 5%;
+		right: auto;
+		top: 60%;*/
     width: 45%;
   }
 
   .contacts #map {
-    height: 200vh;
+    height: 110vh;
   }
 
   .contacts__subscribe {
@@ -2299,7 +2296,7 @@ input.error {
   }
 
   .header .top-menu__menu {
-    width: 60%;
+    width: 50%;
   }
 
   .header__content h1 {
@@ -3301,11 +3298,12 @@ input.error {
   }
 
   .contacts #map {
-    height: 220vh;
+    height: 1600px;
   }
 
   .contacts.mobile-active .contacts__location {
-    top: 60%;
+    bottom: 5%;
+    top: auto;
     display: block;
   }
 
