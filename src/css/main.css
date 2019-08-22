@@ -1770,14 +1770,20 @@ input.error {
   display: block;
 }
 
-.contacts__location p {
+.contacts__location a {
+  display: block;
+}
+
+.contacts__location p,
+.contacts__location a {
   font-size: 24px;
   line-height: 28px;
   color: #000;
   margin-bottom: 30px;
 }
 
-.contacts__location p:last-child {
+.contacts__location p:last-child,
+.contacts__location a:last-child {
   margin-bottom: 0;
 }
 
@@ -1828,6 +1834,30 @@ input.error {
 
 .contacts .location__worktime span {
   font-weight: bold;
+}
+
+.contacts .location__phone {
+  display: inline-block;
+}
+
+.contacts .location__icons {
+  display: inline-block;
+}
+
+.contacts .location__icons .icon {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-left: 15px;
+  margin-bottom: -3px;
+}
+
+.contacts .location__icons .icon:first-child {
+  background: url("img/icons/whatsapp.svg") 0 0/contain no-repeat;
+}
+
+.contacts .location__icons .icon:last-child {
+  background: url("img/icons/viber.svg") 0 0/contain no-repeat;
 }
 
 .contacts__subscribe {
@@ -2163,10 +2193,16 @@ input.error {
     margin-bottom: 35px;
   }
 
-  .contacts__location p {
+  .contacts__location p,
+  .contacts__location a {
     font-size: 16px;
     line-height: 19px;
     margin-bottom: 20px;
+  }
+
+  .contacts .location__icons .icon {
+    width: 20px;
+    height: 20px;
   }
 
   .contacts .location__title {
@@ -2185,14 +2221,15 @@ input.error {
     line-height: 1.5;
   }
 
-  .contacts__subscribe {
-    width: 30%;
-    top: 53%;
-    bottom: auto;
-  }
+  /*.contacts__subscribe {
+		width: 35% !important;
+		top: 30% !important;
+		bottom: auto;
+		display: block !important;
+	}*/
 
   .contacts #map {
-    height: 650px;
+    height: 120vh !important;
   }
 }
 
@@ -2261,11 +2298,15 @@ input.error {
     width: 100%;
   }
 
+  .contacts .location__worktime span {
+    display: block;
+  }
+
   .contacts__location {
     /*left: 5%;
 		right: auto;
 		top: 60%;*/
-    width: 45%;
+    width: 35%;
   }
 
   .contacts #map {
@@ -2284,20 +2325,29 @@ input.error {
   }
 }
 
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: 1280px) {
   .header .top-menu__left-side {
     flex-wrap: wrap;
-    width: 30%;
+    width: auto;
   }
 
   .header .left-side__subtitle {
-    width: 100%;
-    margin-top: 20px;
-    margin-left: 70px;
+    display: none;
+  }
+
+  .header .right-side__phone p {
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-top: 2px;
   }
 
   .header .top-menu__menu {
     width: 50%;
+  }
+
+  .header .right-side__phone .icon {
+    margin-right: 7px;
   }
 
   .header__content h1 {
@@ -2372,7 +2422,7 @@ input.error {
   }
 
   .contacts #map {
-    height: 200vh;
+    /*height: 0vh;*/
   }
 
   .contacts.tablet-active .contacts__subscribe {
@@ -2758,6 +2808,11 @@ input.error {
 
   .documents__nav {
     width: 100%;
+  }
+
+  .documents__nav .item__bottom,
+  .documents__nav .item__top {
+    width: 50%;
   }
 
   .contacts.mobile-active .contacts__location {
@@ -3307,7 +3362,7 @@ input.error {
   }
 
   .contacts #map {
-    height: 1600px;
+    height: 1600px !important;
   }
 
   .contacts.mobile-active .contacts__location {

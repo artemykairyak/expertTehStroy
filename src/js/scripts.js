@@ -209,7 +209,7 @@ $(function(){
 
 	ymaps.ready(function () {
 		var myMap = new ymaps.Map('map', {
-			center: [55.760851099950635, 37.75161043981168],
+			center: [55.87898495672535,37.63729452513122],
 			zoom: 16,
 			controls: []
 
@@ -220,7 +220,7 @@ $(function(){
 		MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div class="placemark_layout_container"><div class="circle_layout"></div></div>');
 
 
-		var myPlacemark = new ymaps.Placemark([55.760851099950635, 37.75161043981168], {
+		var myPlacemark = new ymaps.Placemark([55.87898495672535,37.63729452513122], {
 			iconContent: '12'
 		}, {
         // Опции.
@@ -240,8 +240,12 @@ $(function(){
 
 		myMap.geoObjects.add(myPlacemark);
 		myMap.behaviors.disable('scrollZoom');
-		myMap.behaviors.disable('drag');
+		// myMap.behaviors.disable('drag');
 		myMap.container.fitToViewport();
+
+		if ($(window).width() < 1280) {
+			myMap.setCenter([55.88199005672535,37.63729452513122]);
+		}
 
 		myPlacemark.events.add('click', function () {
 			if($(window).width() > 996 && $(window).width() < 1355) {
@@ -255,6 +259,8 @@ $(function(){
 		});
 	});
 });
+
+// $('.questions-form').hide();
 
 function onInitSlider () {
 	$('.documents__main-slide .table__item img').attr('src', $('.documents__nav .table__item:first img').attr('src'));
