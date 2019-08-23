@@ -2533,10 +2533,6 @@ input.error {
 	.footer__item:last-child {
 		width: 30%;
 	}
-	
-	.contacts #map {
-		/*height: 0vh;*/
-	}
 
 	.contacts.tablet-active {
 		.contacts__subscribe {
@@ -2552,6 +2548,20 @@ input.error {
 	
 	.contacts__subscribe {
 		left: 5%;
+	}
+}
+
+@media screen and (max-width: 1160px) { 
+	.header .right-side__phone p {
+		display: none;
+	}
+
+	.header .right-side__phone .icon {
+		margin-right: 20px;
+	}
+
+	.header .top-menu__menu {
+		width: 55%;
 	}
 }
 
