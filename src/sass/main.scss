@@ -610,7 +610,7 @@ a {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			width: 25%;
+			width: 30%;
 
 			& * {
 				transition: all 0.3s ease; 
@@ -629,6 +629,23 @@ a {
 					}
 					
 				}
+			}
+
+			.icon:nth-child(2), .icon:nth-child(3) {
+				width: 25px;
+				height: 25px;
+				display: inline-block;
+				margin-left: 15px;
+				margin-bottom: 3px;
+			}
+
+			.icon:nth-child(2) {
+				background: url(img/icons/whatsapp.svg) 0 0 / contain no-repeat;
+			}
+
+			.icon:nth-child(3) {
+				margin-right: 15px;
+				background: url(img/icons/viber.svg) 0 0 / contain no-repeat;
 			}
 
 			.right-side__youtube {
@@ -1629,6 +1646,10 @@ input.error {
 		position: relative;
 		margin-right: 1.7%;
 
+		.table__item {
+			height: 100%;
+		}
+
 		img {
 			width: 100%;
 			height: 100%;
@@ -1641,6 +1662,7 @@ input.error {
 			right: 0;
 			background: $blue;
 			padding: 30px 37px;
+			display: none;
 
 			span {
 				display: block;
@@ -1722,6 +1744,7 @@ input.error {
 
 .objects {
 	padding-bottom: 10%;
+	display: none;
 
 	&__slider {
 		width: 100%;
@@ -2309,8 +2332,15 @@ input.error {
 		}
 	}
 
+	.header .right-side__phone .icon {
+		margin-right: 0;
+	}
+	.header .right-side__email .icon {
+		margin-right: 15px;
+	}
+
 	.header .top-menu__menu {
-		width: 50%;
+		width: 45%;
 	}
 
 	.works__calculate-btn {
@@ -2359,8 +2389,22 @@ input.error {
 		}
 	}
 
+	.header .left-side__subtitle {
+		display: none;
+	}
+
+	.header .right-side__phone p {
+		display: inline-block;
+		font-size: 16px;	
+		margin-top: 2px;
+	}
+
 	.header .top-menu__menu {
-		width: 45%;
+		width: 44%;
+	}
+
+	.header .right-side__phone .icon {
+		margin-right: 7px;
 	}
 
 	.header__other-buttons {
@@ -2439,26 +2483,6 @@ input.error {
 	.header .top-menu__left-side {
 		flex-wrap: wrap;
 		width: auto;
-	}
-
-
-	.header .left-side__subtitle {
-		display: none;
-	}
-
-	.header .right-side__phone p {
-		display: inline-block;
-		font-size: 16px;	
-		margin-right: 20px;
-		margin-top: 2px;
-	}
-
-	.header .top-menu__menu {
-		width: 50%;
-	}
-
-	.header .right-side__phone .icon {
-		margin-right: 7px;
 	}
 
 	.header__content {
@@ -2554,14 +2578,10 @@ input.error {
 @media screen and (max-width: 1160px) { 
 	.header .right-side__phone p {
 		display: none;
-	}
-
-	.header .right-side__phone .icon {
-		margin-right: 20px;
-	}
+	}	
 
 	.header .top-menu__menu {
-		width: 55%;
+		width: 49%;
 	}
 }
 
@@ -2987,7 +3007,7 @@ input.error {
 	}
 
 	.documents__nav .item__info {
-		display: block;
+		/*display: block;*/
 		bottom: 0;
 		height: 25%;
 		padding-top: 5%;
