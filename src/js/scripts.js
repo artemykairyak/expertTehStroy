@@ -38,8 +38,8 @@ $(function(){
 		e.preventDefault();
 	});
 
-	$('.header .more-btn').on('click', function() {
-		scrollTo('.services');
+	$('.header .more-btn').on('click', function(e) {
+		scrollTo('.works');
 		e.preventDefault();
 	});
 
@@ -281,9 +281,10 @@ function showModal(modal) {
 }
 
 function scrollTo(destSelector) {
+
 	$padding = $('.header').css('padding-top');
 	$offset = $(destSelector).offset().top - parseInt($padding) - 15;
-	$('html').animate({ 
+	$('body, html').animate({ 
 		scrollTop: $offset
 	}, 1000);
 

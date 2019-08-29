@@ -39,6 +39,11 @@ a {
 	text-decoration: none;
 }
 
+input, textarea {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+
 .overlay {
 	position: fixed;
 	top: 0;
@@ -335,7 +340,7 @@ a {
 .mobile-menu {
 	position: fixed;
 	top: 0;
-	right: -100%;
+	right: -105%;
 	background: $blue;
 	padding: 127px 30px 30px 60px;
 	z-index: 50 !important;
@@ -347,6 +352,9 @@ a {
 
 	&__added-icons {
 		display: none;
+	}
+	.added-icons__phone {
+		display: inline-block;
 	}
 
 	& * {
@@ -384,6 +392,19 @@ a {
 				content: '';
 				background: #FDC72B;
 			}
+		}
+
+		&.whatsapp {
+			background: url(img/icons/whatsapp.svg) 0 0 / contain no-repeat;
+			margin-left: 10px;
+			margin-right: 0;
+			margin-bottom: -3px;
+		}
+
+		&.viber {
+			margin-left: 10px;
+			background: url(img/icons/viber.svg) 0 0 / contain no-repeat;
+			margin-bottom: -3px;
 		}
 	}
 }
@@ -3082,7 +3103,15 @@ input.error {
 
 	.mobile-menu {
 		
-		padding: 40px 22px 45px;
+		padding: 20px 22px 25px;
+
+		li {
+			margin-bottom: 20px;
+		}
+		
+		a {
+			padding-bottom: 0;
+		}
 
 		&.active {
 			width: 100%;
@@ -3148,7 +3177,7 @@ input.error {
 				width: 20px;
 				height: 20px;
 				display: inline-block;
-				margin-right: 20px;
+				margin-right: 15px;
 			}
 		}
 
@@ -3229,7 +3258,7 @@ input.error {
 	}
 
 	.modal__form {
-		margin-top: 30px;
+		margin: 20px 0 0;
 	}
 
 	.header .mobile-header__center {
@@ -3454,7 +3483,7 @@ input.error {
 		padding-bottom: 40%;
 	}
 
-	.documents__nav .item__info {
+	/*.documents__nav .item__info {
 		height: 40%;
 		padding: 0 10px 0 13px;
 		font-size: 16px;
@@ -3464,7 +3493,7 @@ input.error {
 		display: -ms-flex;
 		display: -o-flex;
 		display: flex;
-	}
+	}*/
 	
 	.objects {
 		padding-top: 70px;
