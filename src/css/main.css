@@ -332,6 +332,7 @@ textarea {
   padding: 127px 30px 30px 60px;
   z-index: 50 !important;
   transition: all 0.3s ease;
+  width: auto;
 }
 
 .mobile-menu__top-labels {
@@ -342,8 +343,9 @@ textarea {
   display: none;
 }
 
-.mobile-menu .added-icons__phone {
-  display: inline-block;
+.mobile-menu .added-icons__phone,
+.mobile-menu .added-icons__email {
+  display: none;
 }
 
 .mobile-menu * {
@@ -356,6 +358,10 @@ textarea {
 
 .mobile-menu li {
   margin-bottom: 40px;
+}
+
+.mobile-menu li:last-child {
+  margin-bottom: 70px;
 }
 
 .mobile-menu a {
@@ -382,17 +388,32 @@ textarea {
   background: #FDC72B;
 }
 
+.mobile-menu a.icon:hover:after {
+  display: none;
+}
+
 .mobile-menu a.whatsapp {
-  background: url("img/icons/whatsapp.svg") 0 0/contain no-repeat;
+  background: url("img/icons/002-whatsapp.svg") 0 0/contain no-repeat;
   margin-left: 10px;
   margin-right: 0;
-  margin-bottom: -3px;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
 }
 
 .mobile-menu a.viber {
+  display: inline-block;
+  width: 36px;
+  height: 40px;
+  background: url("img/icons/001-viber.svg") 0 0/contain no-repeat;
+}
+
+.mobile-menu a.youtube {
   margin-left: 10px;
-  background: url("img/icons/viber.svg") 0 0/contain no-repeat;
-  margin-bottom: -3px;
+  display: inline-block;
+  width: 44px;
+  height: 28px;
+  background: url("img/icons/video-play.png") 0 0/contain no-repeat;
 }
 
 .header {
@@ -606,7 +627,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
+  width: 28%;
 }
 
 .header .top-menu__right-side * {
@@ -623,8 +644,7 @@ textarea {
   border-bottom: 1px solid #fff;
 }
 
-.header .top-menu__right-side .icon:nth-child(2),
-.header .top-menu__right-side .icon:nth-child(3) {
+.header .top-menu__right-side .icon {
   width: 25px;
   height: 25px;
   display: inline-block;
@@ -632,18 +652,24 @@ textarea {
   margin-bottom: 3px;
 }
 
-.header .top-menu__right-side .icon:nth-child(2) {
-  background: url("img/icons/whatsapp.svg") 0 0/contain no-repeat;
+.header .top-menu__right-side .icon.whatsapp {
+  width: 20px;
+  height: 20px;
+  margin-right: 11px;
+  margin-left: 0;
+  background: url("img/icons/002-whatsapp.svg") 0 0/contain no-repeat;
 }
 
-.header .top-menu__right-side .icon:nth-child(3) {
-  margin-right: 15px;
-  background: url("img/icons/viber.svg") 0 0/contain no-repeat;
+.header .top-menu__right-side .icon.viber {
+  width: 20px;
+  height: 20px;
+  margin-right: 11px;
+  background: url("img/icons/001-viber.svg") 0 0/contain no-repeat;
 }
 
 .header .top-menu__right-side .right-side__youtube {
   width: 24px;
-  height: 15px;
+  height: 14px;
   background: url("img/icons/video-play.png") 0 0/contain no-repeat;
   margin-bottom: 2px;
 }
@@ -703,6 +729,10 @@ textarea {
 
 .header .right-side__email .icon {
   background: url("img/icons/email.png") 0 0/contain no-repeat;
+}
+
+.header .right-side__youtube:hover {
+  opacity: 0.8;
 }
 
 .header__content {
@@ -2491,7 +2521,7 @@ input.error {
   }
 
   .header .top-menu__menu {
-    width: 49%;
+    width: 48%;
   }
 }
 
@@ -2578,6 +2608,18 @@ input.error {
 
   .header__mobile-header {
     display: flex;
+    align-items: center;
+  }
+
+  .mobile-menu__added-icons {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    justify-content: space-between;
+  }
+
+  .works .item__head p {
+    font-size: 16px;
   }
 
   .works .item__info {
@@ -2988,10 +3030,15 @@ input.error {
   }
 
   .mobile-menu {
+    width: 100%;
     padding: 20px 22px 25px;
   }
 
   .mobile-menu li {
+    margin-bottom: 20px;
+  }
+
+  .mobile-menu li:last-child {
     margin-bottom: 20px;
   }
 
@@ -3037,7 +3084,8 @@ input.error {
   }
 
   .mobile-menu__added-icons {
-    display: block;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     margin: 25px 0 0;
   }
 
@@ -3087,6 +3135,30 @@ input.error {
 
   .mobile-menu .mobile-header__labels {
     display: block;
+  }
+
+  .mobile-menu .added-icons__email,
+  .mobile-menu .added-icons__phone {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-menu a.viber,
+  .mobile-menu a.whatsapp {
+    margin-right: 35px;
+    margin-left: 0;
+    width: 30px;
+    height: 30px;
+  }
+
+  .mobile-menu a.youtube {
+    margin-left: 0;
+    width: 30px;
+    height: 19px;
+  }
+
+  .mobile-menu .added-icons__phone {
+    margin-bottom: 30px;
   }
 
   .header .mobile-header__phone .icon {

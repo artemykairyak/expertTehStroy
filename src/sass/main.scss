@@ -345,6 +345,7 @@ input, textarea {
 	padding: 127px 30px 30px 60px;
 	z-index: 50 !important;
 	transition: all 0.3s ease;
+	width: auto;
 
 	&__top-labels {
 		display: none;
@@ -352,9 +353,11 @@ input, textarea {
 
 	&__added-icons {
 		display: none;
+
+		
 	}
-	.added-icons__phone {
-		display: inline-block;
+	.added-icons__phone, .added-icons__email {
+		display: none;
 	}
 
 	& * {
@@ -367,6 +370,10 @@ input, textarea {
 
 	li {
 		margin-bottom: 40px;
+
+		&:last-child {
+			margin-bottom: 70px;
+		}
 	}
 
 	a {
@@ -394,17 +401,35 @@ input, textarea {
 			}
 		}
 
+		&.icon:hover {
+			&:after {
+				display: none;
+			}
+		}
+
 		&.whatsapp {
-			background: url(img/icons/whatsapp.svg) 0 0 / contain no-repeat;
+			background: url(img/icons/002-whatsapp.svg) 0 0 / contain no-repeat;
 			margin-left: 10px;
-			margin-right: 0;
-			margin-bottom: -3px;
+			margin-right: 0;		
+			display: inline-block;
+			width: 36px;
+			height: 36px;
 		}
 
 		&.viber {
+			display: inline-block;
+			width: 36px;
+			height: 40px;		
+			background: url(img/icons/001-viber.svg) 0 0 / contain no-repeat;
+			
+		}
+
+		&.youtube {
 			margin-left: 10px;
-			background: url(img/icons/viber.svg) 0 0 / contain no-repeat;
-			margin-bottom: -3px;
+			display: inline-block;
+			width: 44px;
+			height: 28px;		
+			background: url(img/icons/video-play.png) 0 0 / contain no-repeat;
 		}
 	}
 }
@@ -631,7 +656,7 @@ input, textarea {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			width: 30%;
+			width: 28%;
 
 			& * {
 				transition: all 0.3s ease; 
@@ -652,7 +677,7 @@ input, textarea {
 				}
 			}
 
-			.icon:nth-child(2), .icon:nth-child(3) {
+			.icon {
 				width: 25px;
 				height: 25px;
 				display: inline-block;
@@ -660,18 +685,24 @@ input, textarea {
 				margin-bottom: 3px;
 			}
 
-			.icon:nth-child(2) {
-				background: url(img/icons/whatsapp.svg) 0 0 / contain no-repeat;
+			.icon.whatsapp {
+				width: 20px;
+				height: 20px;
+				margin-right: 11px;
+				margin-left: 0;
+				background: url(img/icons/002-whatsapp.svg) 0 0 / contain no-repeat;
 			}
 
-			.icon:nth-child(3) {
-				margin-right: 15px;
-				background: url(img/icons/viber.svg) 0 0 / contain no-repeat;
+			.icon.viber {
+				width: 20px;
+				height: 20px;
+				margin-right: 11px;
+				background: url(img/icons/001-viber.svg) 0 0 / contain no-repeat;
 			}
 
 			.right-side__youtube {
 				width: 24px;
-				height: 15px;
+				height: 14px;
 				background: url(img/icons/video-play.png) 0 0 / contain no-repeat;
 				margin-bottom: 2px;
 			}
@@ -740,6 +771,10 @@ input, textarea {
 			.icon {
 				background: url(img/icons/email.png) 0 0 / contain no-repeat;
 			}
+		}
+
+		&__youtube:hover {
+			opacity: 0.8;
 		}
 	}
 
@@ -2602,7 +2637,7 @@ input.error {
 	}	
 
 	.header .top-menu__menu {
-		width: 49%;
+		width: 48%;
 	}
 }
 
@@ -2688,6 +2723,18 @@ input.error {
 
 	.header__mobile-header {
 		display: flex;
+		align-items: center;
+	}
+
+	.mobile-menu__added-icons {
+		display: flex;
+		align-items: center;
+		width: 95%;
+		justify-content: space-between;
+	}
+
+	.works .item__head p {
+		font-size: 16px;
 	}
 
 	.works .item__info {
@@ -3102,11 +3149,15 @@ input.error {
 	}
 
 	.mobile-menu {
-		
+		width: 100%;
 		padding: 20px 22px 25px;
 
 		li {
 			margin-bottom: 20px;
+
+			&:last-child {
+				margin-bottom: 20px;
+			}
 		}
 		
 		a {
@@ -3151,8 +3202,11 @@ input.error {
 			}
 		}
 
+
+
 		&__added-icons {
-			display: block;
+			flex-wrap: wrap;
+			justify-content: flex-start;	
 			margin: 25px 0 0;
 
 			a {
@@ -3205,6 +3259,31 @@ input.error {
 		.mobile-header__labels {
 			display: block;
 		}
+
+		
+	}
+
+	.mobile-menu .added-icons__email, 
+	.mobile-menu .added-icons__phone {
+		display: block;
+		width: 100%;
+	}
+
+	.mobile-menu a.viber, .mobile-menu a.whatsapp {
+			margin-right: 35px;
+			margin-left: 0;
+			width: 30px;
+			height: 30px;
+		}
+
+	.mobile-menu a.youtube {
+		margin-left: 0;
+		width: 30px;
+		height: 19px;
+	}
+
+	.mobile-menu .added-icons__phone {
+		margin-bottom: 30px;
 	}
 
 	.header .mobile-header__phone .icon {
