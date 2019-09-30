@@ -1,676 +1,533 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Описание страницы для SEO и соцсетей">
-	<meta name="keywords" content="ключевые, слова, через, запятую">
-	<link rel="shortcut icon" type='image/png' href="img/icons/favicon.ico" />
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-	<title>ЭкспертТехСтрой</title>
-	<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,500,700|Roboto:400,500,700&display=swap" rel="stylesheet">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="vendors/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Описание страницы для SEO и соцсетей">
+    <meta name="keywords" content="ключевые, слова, через, запятую">
+    <link rel="shortcut icon" type='image/png' href="img/icons/favicon.ico" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>ЭкспертТехСтрой</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,500,700|Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendors/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/css/simpleLightbox.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-	<div class="overlay"></div>
-	<div class="modal__success success__callback modal">
-		<div class="modal__wrapper">		
-			<div class="modal__close"></div>
-			<div class="modal-success__icon"></div>
-			<h2 class="modal__title">Ваша заявка успешно отправлена!</h2>
-			<p class="modal__subtitle">Ожидайте звонка специалиста!</p>
-		</div>
-	</div>
-	<div class="modal__policy modal">
-		<div class="modal__close"></div>
-		<h2>Согласие с политикой обработки персональных данных</h2>
-		<p>
-			Настоящим я, далее – «Субъект Персональных Данных», во исполнение требований Федерального закона от 27.07.2006 г. № 152-ФЗ «О персональных данных» (с изменениями и дополнениями) свободно, своей волей и в своем интересе даю свое согласие на обработку своих персональных данных, указанных при регистрации путем заполнения веб-формы на сайте, направляемой (заполненной) с использованием сайта.<br><br>
-
-			Под персональными данными я понимаю любую информацию, относящуюся ко мне как к Субъекту Персональных Данных, в том числе мои фамилию, имя, отчество, адрес, образование, профессию, контактные данные (телефон, факс, электронная почта, почтовый адрес), фотографии, иную другую информацию. Под обработкой персональных данных я понимаю сбор, систематизацию, накопление, уточнение, обновление, изменение, использование, распространение, передачу, в том числе трансграничную, обезличивание, блокирование, уничтожение, бессрочное хранение), и любые другие действия (операции) с персональными данными.<br><br>
-
-			Обработка персональных данных Субъекта Персональных Данных осуществляется исключительно в целях регистрации Субъекта Персональных Данных в базе данных с последующим направлением Субъекту Персональных Данных почтовых сообщений и смс-уведомлений, в том числе рекламного содержания, от компании, его аффилированных лиц и/или субподрядчиков, информационных и новостных рассылок и другой информации рекламно-новостного содержания.<br><br>
-
-			Датой выдачи согласия на обработку персональных данных Субъекта Персональных Данных является дата отправки регистрационной веб-формы с сайта.<br><br>
-
-			Обработка персональных данных Субъекта Персональных Данных может осуществляться с помощью средств автоматизации и/или без использования средств автоматизации в соответствии с действующим законодательством РФ и внутренними положениями.<br><br>
-
-			Компания принимает необходимые правовые, организационные и технические меры или обеспечивает их принятие для защиты персональных данных от неправомерного или случайного доступа к ним, уничтожения, изменения, блокирования, копирования, предоставления, распространения персональных данных, а также от иных неправомерных действий в отношении персональных данных, а также принимает на себя обязательство сохранения конфиденциальности персональных данных Субъекта Персональных Данных. Компания вправе привлекать для обработки персональных данных Субъекта Персональных Данных субподрядчиков, а также вправе передавать персональные данные для обработки своим аффилированным лицам, обеспечивая при этом принятие такими субподрядчиками и аффилированными лицами соответствующих обязательств в части конфиденциальности персональных данных.<br><br>
-
-			<span>Я ознакомлен(а), что:</span>
-			настоящее согласие на обработку моих персональных данных, указанных при регистрации на Сайте, направляемых (заполненных) с использованием Сайта, действует в течение 20 (двадцати) лет с момента регистрации на Сайте;
-			согласие может быть отозвано мною на основании письменного заявления в произвольной форме;
-			предоставление персональных данных третьих лиц без их согласия влечет ответственность в соответствии с действующим законодательством Российской Федерации.
-		</p>
-	</div>
-	<div class="modal__document modal">
-		<div class="modal__close"></div>
-		<img src="" alt="">
-	</div>
-	<div class="modal__callback modal">
-		<div class="modal__wrapper">
-			<div class="modal__close"></div>
-			<h2 class="modal__title">Оставьте свои данные</h2>
-			<p class="modal__subtitle">И специалист свяжется с вами в течение 15 минут</p>
-			<form action="" method="POST" name="callback-form" class="modal__form">
-				<input type="text" name="name" placeholder="Ваше имя*">
-				<input type="text" name="phone" placeholder="Телефон*">
-				<input type="submit" value="Перезвоните мне" class="modal__btn btn">
-			</form>
-			<p class="modal__policy-link">Нажимая данную кнопку вы соглашаетесь с <a href="#">пользовательским соглашением и политикой о конфиденциальности</a></p>
-		</div>
-	</div>
-	<div class="modal__mail modal">
-		<div class="modal__wrapper">
-			<div class="modal__close"></div>
-			<h2 class="modal__title">Оставьте сообщение</h2>
-			<p class="modal__subtitle">и мы оперативно ответим вам на email</p>
-			<form action="" method="POST" name="mail-form" class="modal__form">
-				<input type="text" name="name" placeholder="Ваше имя*">
-				<input type="text" name="email" placeholder="Ваш email*">
-				<textarea name="message" placeholder="Текст сообщения"></textarea>
-				<input type="submit" value="Получить ответ" class="modal__btn btn">
-			</form>
-			<p class="modal__policy-link">Нажимая данную кнопку вы соглашаетесь с <a href="#">пользовательским соглашением и политикой о конфиденциальности</a></p>
-		</div>
-	</div>
-	<section class="header" style="background: url(img/header-bg.jpg) center/cover no-repeat;">
-		<div class="wrapper">
-			<div class="header__mobile-header">
-				<div class="mobile-header__left">
-					<a href="tel:" class="mobile-header__phone">
-						<div class="icon"></div>	
-					</a>
-					<a href="mailto:" class="mobile-header__email">
-						<div class="icon"></div>
-					</a>
-				</div>
-				
-				<div class="mobile-header__center">
-					<div class="mobile-header__logo"></div>
-					<div class="mobile-header__labels">
-						<a href="/" class="mobile-header__title">ЭкспертТехСтрой</a>
-						<div class="mobile-header__subtitle">Строительная экспертиза</div>
-					</div>
-					
-				</div>
-				<div class="mobile-header__burger burger">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<div class="mobile-menu">
-					<div class="mobile-menu__top-labels">
-						<div class="mobile-menu__labels">
-							<a href="/" class="mobile-menu__title">ЭкспертТехСтрой</a>
-							<div class="mobile-menu__subtitle">Строительная экспертиза</div>
-						</div>
-					</div>
-					<ul>
-						<li class="services-item"><a href="#">Услуги</a></li>
-						<li class="advantages-item"><a href="#">Преимущества</a></li>
-						<li class="deadlines-item"><a href="#">Сроки проведения</a></li>
-						<li class="contacts-item"><a href="#">Контакты</a></li>
-					</ul>
-					<div class="mobile-menu__added-icons">
-						<a href="mailto:" class="added-icons__email">
-							<div class="icon"></div>
-							<p>example@example.ru</p>
-						</a>
-						<a href="tel:" class="added-icons__phone">
-							<div class="icon"></div>
-							<p>+7 000 000 00 00</p>
-						</a>
-						<a href="viber://add?number=" class="icon viber"></a>
-						<a href="whatsapp://send?phone=+" class="icon whatsapp"></a>
-						<a href="#" class="icon youtube"></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="header__top-menu">
-				<div class="top-menu__left-side">
-					<div class="left-side__logo"></div>
-					<a href="/" class="left-side__title">ЭкспертТехСтрой</a>
-					<div class="left-side__subtitle">Строительная экспертиза</div>
-				</div>
-				<div class="top-menu__menu">
-					<ul>
-						<li class="services-item">
-							<a href="#" class="menu__item">Услуги</a>
-						</li>
-						<li class="advantages-item">
-							<a href="#" class="menu__item">Преимущества</a>
-						</li>
-						<li class="deadlines-item">
-							<a href="#" class="menu__item">Сроки проведения</a>
-						</li>
-						<li class="contacts-item">
-							<a href="#" class="menu__item">Контакты</a>
-						</li>
-					</ul>
-				</div>
-				<div class="top-menu__right-side">
-					<a href="tel:" class="right-side__phone">
-						<div class="icon"></div>
-						<p>+7 927 222 45 75</p>
-					</a>
-					<a href="mailto:" class="right-side__email">
-						<div class="icon"></div>
-						<p>info@e-ts.ru</p>
-					</a>
-					<a href="viber://add?number=" class="icon viber"></a>
-					<a href="whatsapp://send?phone=+" class="icon whatsapp"></a>
-					<a href="#" class="right-side__youtube"></a>
-				</div>
-			</div>
-			<div class="header__content">
-				<h1>Независимая строительная экспертиза для юридических и физических лиц</h1>
-				<p>Решение судебных споров в пользу нашего заказчика в 99% случаев</p>
-			</div>
-			<a href="#" class="header__calculate-btn btn">Рассчитать стоимость</a><a href="#" class="more-btn">Подробнее об услугах</a>
-			<div class="header__other-buttons">
-				<a href="#" class="write-btn btn"><span class="icon"></span>Напишите нам</a>
-				<a href="#" class="call-btn btn"><span class="icon"></span>Заказать звонок</a>
-			</div>
-		</div>
-	</section>
-	<section class="works">
-		<div class="wrapper">
-			<h2 class="works__title title">Выполняем работы по обследованию и экспертизе</h2>
-			<div class="works__table">
-				<div class="table__item">
-					<div class="item__head"><p>Зданий, сооружений, объектов незавершенного строительства</p></div>
-					<div class="item__body">
-						<div class="item__pic" style="background: url(img/works1.jpg) center / cover no-repeat;"></div>
-						<div class="item__info">
-							<p class="info__title">Экспертиза установит:</p>
-							<ul>
-								<li>Качество применяемых материалов и возводимых конструкций</li>
-								<li>Степень износа зданий и сооружений</li>
-								<li>Соответствие ГОСТам, санитарно-эпидемиологическим и другим требованиям нормативной документации, действующей не территории РФ</li>
-								<li>Необходимость ремонта, реконструкции или сноса здания</li>
-								<li>Стоимость работ по приведению здания в безопасное для эксплуатации состояние</li>
-								<li>Состояние инженерных коммуникаций</li>
-							</ul>
-							<a href="#" class="works__calculate-btn btn">Рассчитать стоимость</a>
-							<div class="info__close">Свернуть <span class="icon"></span></div>
-						</div>
-					</div>
-				</div>
-				<div class="table__item">
-					<div class="item__head"><p>Частных домов и квартир</p></div>
-					<div class="item__body">
-						<div class="item__pic" style="background: url(img/works2.jpg) center / cover no-repeat;"></div>
-						<div class="item__info">
-							<p class="info__title">Экспертиза установит:</p>
-							<ul>
-								<li>Качество фасадов, стен и перекрытий, Наличие неровностей стен, полов</li>
-								<li>Правильности отдельных конструкций на соответствие проекту, обязательным к применению строительным нормам и правилам, технологии строительства</li>
-								<li>Объемы выполненных строительных работ и их стоимость</li>
-								<li>Качество ремонтно-отделочных работ </li>
-								<li>Качество монтажа окон и остекления балкона, дверных блоков и их монтажа</li>
-								<li>Качество сантехники и ее монтажа</li>
-							</ul>
-							<a href="#" class="works__calculate-btn btn">Рассчитать стоимость</a>
-							<div class="info__close">Свернуть <span class="icon"></span></div>
-						</div>
-					</div>
-				</div>
-				<div class="table__item">
-					<div class="item__head"><p>Строительных и отделочных работ</p></div>
-					<div class="item__body">
-						<div class="item__pic" style="background: url(img/works3.jpg) center / cover no-repeat;"></div>
-						<div class="item__info">
-							<p class="info__title">Экспертиза установит:</p>
-							<ul>
-								<li>Качество возведения несущих конструкций здания или сооружения</li>
-								<li>Наличие или отсутствие дефектов кровли, фундаментов, стен, перекрытий.
-								</li>
-							</ul>
-							<a href="#" class="works__calculate-btn btn">Рассчитать стоимость</a>
-							<div class="info__close">Свернуть <span class="icon"></span></div>
-						</div>
-					</div>
-				</div>
-				<div class="table__item">
-					<div class="item__head"><p>Строительных материалов</p></div>
-					<div class="item__body">
-						<div class="item__pic" style="background: url(img/works4.jpg) center / cover no-repeat;"></div>
-						<div class="item__info">
-							<p class="info__title">Экспертиза установит:</p>
-							<ul>
-								<li>Марку использованных строительных материалов</li>
-								<li>Качество использованных при строительстве материалов</li>
-								<li>Стоимость и количество использованных материалов</li>
-								<li>Соответствие использованных материалов проектно-сметной документации
-								</li>
-							</ul>
-							<a href="#" class="works__calculate-btn btn">Рассчитать стоимость</a>
-							<div class="info__close">Свернуть <span class="icon"></span></div>
-						</div>
-					</div>
-				</div>
-				<div class="table__item">
-					<div class="item__head"><p>Сметной и проектной документации</p></div>
-					<div class="item__body">
-						<div class="item__pic" style="background: url(img/works5.jpg) center / cover no-repeat;"></div>
-						<div class="item__info">
-							<p class="info__title">Экспертиза установит:</p>
-							<ul>
-								<li>Правильность составления исполнительной документации и соответствие ее нормам и регламентам</li>
-								<li>Достаточность исполнительной документации
-								</li>
-							</ul>
-							<a href="#" class="works__calculate-btn btn">Рассчитать стоимость</a>
-							<div class="info__close">Свернуть <span class="icon"></span></div>
-						</div>
-					</div>
-				</div>
-				<div class="table__item">
-					<div class="item__head"><p>Инженерных коммуникаций</p></div>
-					<div class="item__body">
-						<div class="item__pic" style="background: url(img/works6.jpg) center / cover no-repeat;"></div>
-						<div class="item__info">
-							<p class="info__title">Экспертиза установит:</p>
-							<ul>
-								<li>Качество системы отопления, вентиляции, водоснабжения, водоотведения, канализации.</li>
-							</ul>
-							<a href="#" class="works__calculate-btn btn">Рассчитать стоимость</a>
-							<div class="info__close">Свернуть <span class="icon"></span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="advantages">
-		<div class="wrapper">
-			<h2 class="advantages__title title">Работаем в строительной отрасли более 17 лет</h2>
-			<p class="advantages__text">
-				7 лет специализируемся на решении спорных вопросов строительства и применении строительных норм и правил. Все эксперты компании «ЭкспертТехСтрой» являются инженерами с высшим строительным образованием и опытом работы на строительных объектах от 10 лет
-			</p>
-		</div>
-	</section>
-	<section class="advantages-table">
-		<div class="wrapper">
-			<div class="advantages-table__table">
-				<div class="table__item">
-					<span class="item__title">Скорость</span>
-					<p class="item__text">
-						от 3 дней на выдачу заключения
-					</p>
-				</div>
-				<div class="table__item">
-					<span class="item__title">Качество</span>
-					<p class="item__text">
-						Наши Технические заключения (экспертизы) принимают суды Российской Федерации всех инстанций
-					</p>
-				</div>
-				<div class="table__item">
-					<span class="item__title">Независимость</span>
-					<p class="item__text">
-						Эксперты являются незаинтересованными лицами
-					</p>
-				</div>
-				<div class="table__item">
-					<span class="item__title">Цены</span>
-					<p class="item__text">
-						Честное ценообразование по договору, без скрытых и дополнительных платежей
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="services">
-		<div class="wrapper">
-			<h2 class="services__title title">Наши услуги</h2>
-			<div class="services__table">
-				<div class="table__item">
-					<span class="item__title">Строительная экспертиза</span>
-					<p class="item__text">
-						Осуществляем независимую строительно-техническую экспертизу для суда, экспертизу строительных объектов и недвижимости, экспертизу строительно-монтажных работ.
-					</p>
-				</div>
-				<div class="table__item">
-					<span class="item__title">Технические обследования</span>
-					<p class="item__text">
-						Выполняем обследование технического состояния зданий и сооружений, техническое обследование строительных конструкций, объектов и коммуникаций, фундамента и бетона.
-					</p>
-				</div>
-				<div class="table__item">
-					<span class="item__title">Строительный контроль</span>
-					<p class="item__text">
-						Проводим технический надзор (строительный контроль) за строительством и обеспечиваем ввод объекта в эксплуатацию в срок.
-					</p>
-				</div>
-				<div class="table__item">
-					<span class="item__title">Аудит выполненных строительных работ</span>
-					<p class="item__text">
-						Проверяем качество произведенных строительных работ, соответствие выполненных работ проектным решениям, аудит фактически применяемых на объекте строительных материалов.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="questions">
-		<div class="wrapper">
-			<h2 class="questions__title title">Когда нужна строительная экспертиза</h2>
-			<div class="questions__right-block">
-				<div class="right-block__annotation">Информацию, о наиболее частых нарушениях в сфере строительства смотрите на нашем youtube–канале</div>
-				<div class="right-block__video">
-					<a class="video__video" href="#" style="background: url(img/image.jpg) 0 0 / cover no-repeat;"></a>
-					<div class="video__labels">
-						<span class="labels__author">Среда Валеева</span>
-						<span class="labels__title">Не дай себя обмануть</span>
-					</div>
-				</div>
-			</div>
-			<ul class="questions__list">
-				<li>При сдаче/приёмке строительных работ</li>
-				<li>В спорных ситуациях между заказчиком и подрядчиком</li>
-				<li>При выявлении строительных дефектов в процессе эксплуатации объектов</li>
-				<li>При определении стоимости нанесенного ущерба в результате залива или пожара</li>
-			</ul>
-
-		</div>
-	</section>
-	<section class="deadlines">
-		<div class="wrapper">
-			<h2 class="deadlines__title title">Сроки проведения экспертизы</h2>
-			<div class="deadlines__table">
-				<div class="table__item">
-					<span class="item__title">Расчёт стоимости работ и выезд на объект</span>
-					<span class="item__text">В день обращения</span>
-				</div>
-				<div class="table__item">
-					<span class="item__title">Выдача технического заключения</span>
-					<span class="item__text">от 3 дней в зависимости от сложности экспертизы и объёмов обследуемого объекта</span>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="calculating">
-		<div class="wrapper">
-			<h2 class="calculating__title title">Рассчитать стоимость проведения экспертизы</h2>
-			<form class="calculating__form" action="" method="POST">
-				<p class="first-col">
-					<input type="text" name="name" placeholder="Ваше имя*">
-					<input type="text" name="phone" placeholder="Телефон*">
-					<input type="text" name="email" placeholder="Email*">
-				</p>
-				<p class="second-col">
-					<input type="text" name="region" placeholder="Регион*">
-					<textarea name="message" placeholder="Примечание"></textarea>
-				</p>
-				<p class="bottom-inputs">
-					<label class="attach-btn" for="files">Прикрепить документы</label>
-					<input id="files" type="file" multiple name="files">
-					<span class="files-counter"></span>
-					<input type="submit" name="calculate-btn" value="Рассчитать стоимость" class="btn">
-				</p>
-			</form>
-		</div>
-	</section>
-	<section class="documents">
-		<div class="wrapper">
-			<h2 class="documents__title title">Наши документы</h2>
-			<div class="documents__slider">
-				<div class="documents__main-slide">
-					<div class="table__item">
-						<a href="" target="_blank">
-							<img src="" alt="">
-						</a>
-						<div class="item__info">
-							<span class="info__title"></span>
-							<span class="info__number"></span>
-						</div>
-					</div>
-				</div>
-				<div class="documents__nav owl-carousel owl-theme">
-					<div class="table__item">
-						<div class="item__top">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-						<div class="item__bottom">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-					</div>
-					<div class="table__item">
-						<div class="item__top">
-							<img src="img/object.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа 33</span>
-								<span class="info__number">№123</span>
-							</div>
-						</div>
-						<div class="item__bottom">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-					</div>
-					<div class="table__item">
-						<div class="item__top">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-						<div class="item__bottom">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-					</div>
-					<div class="table__item">
-						<div class="item__top">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-						<div class="item__bottom">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-					</div>
-					<div class="table__item">
-						<div class="item__top">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-						<div class="item__bottom">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-					</div>
-					<div class="table__item">
-						<div class="item__top">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-						<div class="item__bottom">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-					</div>
-					<div class="table__item">
-						<div class="item__top">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-						<div class="item__bottom">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-					</div>
-					<div class="table__item">
-						<div class="item__top">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-						<div class="item__bottom">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-					</div>
-					<div class="table__item">
-						<div class="item__top">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-						<div class="item__bottom">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-					</div>
-					<div class="table__item">
-						<div class="item__top">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-						<div class="item__bottom">
-							<img src="img/doc.jpg" alt="">
-							<div class="item__info">
-								<span class="info__title">Название документа</span>
-								<span class="info__number">№123452643845463832</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="documents__slider-nav">
-					<div class="slider-nav__prev nav"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
-					<div class="slider-nav__next nav"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="objects">
-		<div class="wrapper">
-			<h2 class="objects__title title">Выполненные объекты</h2>
-			<div class="objects__slider owl-carousel owl-theme">
-				<div class="objects__slide">
-					<img src="img/object.jpg" alt="">
-					<div class="slide__info">
-						<span class="info__title">ОАО "РЖД"</span>
-						<span class="info__desc">экспертиза недостроенного строения</span>
-					</div>
-				</div>
-				<div class="objects__slide">
-					<img src="img/object.jpg" alt="">
-					<div class="slide__info">
-						<span class="info__title">ОАО "РЖД"</span>
-						<span class="info__desc">экспертиза недостроенного строения</span>
-					</div>
-				</div>
-				<div class="objects__slide">
-					<img src="img/object.jpg" alt="">
-					<div class="slide__info">
-						<span class="info__title">ОАО "РЖД"</span>
-						<span class="info__desc">экспертиза недостроенного строения</span>
-					</div>
-				</div>
-				<div class="objects__slide">
-					<img src="img/object.jpg" alt="">
-					<div class="slide__info">
-						<span class="info__title">ОАО "РЖД"</span>
-						<span class="info__desc">экспертиза недостроенного строения</span>
-					</div>
-				</div>
-			</div>
-			<div class="objects__slider-nav">
-				<div class="slider-nav__prev nav"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
-				<div class="slider-nav__next nav"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-			</div>
-		</div>
-	</section>
-	<section class="contacts">
-		<form action="" method="POST" class="questions-form">
-			<h2>Остались вопросы?</h2>
-			<p class="questions-form__subtitle">Задайте их нашему специалисту и получите ответ в течение 15 минут</p>
-			<input type="text" name="name" placeholder="Ваше имя">
-			<input type="text" name="phone" placeholder="Телефон">
-			<textarea name="message" id="" placeholder="Сообщение"></textarea>
-			<input type="submit" name="question-btn" value="Задать вопрос" class="btn">
-			<p class="questions-form__policy">Нажимая данную кнопку вы соглашаетесь с <a href="#">пользовательским соглашением и политикой о конфиденциальности</a></p>
-		</form>
-		<div class="contacts__location active">
-			<div class="location__close"></div>
-			<h2 class="location__title">Мы находимся в Москве</h2>	
-			<p class="location__worktime">Работаем с 9:00 до 22:00 <span>без выходных</span></p>
-			<a href="tel:" class="location__phone">+7 000 000 00 00</a><span class="location__icons"><a href="whatsapp://send?phone=+" class="icon whatsapp"></a><a href="viber://add?number=" class="icon viber"></a></span>
-			<a href="mailto:" class="location__email">example@example.ru</a>
-			<p class="location__address">г. Москва, ул. Москва, д.1</p>
-		</div>
-		<div class="contacts__subscribe">
-			<a href="#">Подписывайтесь на наш youtube–канал!</a>
-		</div>
-		<div id="map"></div>
-	</section>
-	<section class="footer">
-		<div class="wrapper">
-			<div class="footer__item">&#169;2019 ЭкспертТехСтрой<br>Все права защищены</div>
-			<div class="footer__item"><a href="#" class="policy">Пользовательское соглашение и политика конфиденциальности</a></div>
-			<div class="footer__item"><div class="asap-logo"></div><p>Разработка сайта — <br><a href="https://asap-ag.ru/" target="_blank">digital–агентство ASAP</a></p></div>	
-		</div>
-	</section>
+    <div class="overlay"></div>
+    <div class="modal__success success__callback modal">
+        <div class="modal__wrapper">
+            <div class="modal__close"></div>
+            <div class="modal-success__icon"></div>
+            <h2 class="modal__title">Ваша заявка успешно отправлена!</h2>
+            <p class="modal__subtitle">Ожидайте звонка специалиста!</p>
+        </div>
+    </div>
+    <div class="modal__policy modal">
+        <div class="modal__close"></div>
+        <h2>Согласие с политикой обработки персональных данных</h2>
+        <p>
+            Настоящим я, далее – «Субъект Персональных Данных», во исполнение требований Федерального закона от 27.07.2006 г. № 152-ФЗ «О персональных данных» (с изменениями и дополнениями) свободно, своей волей и в своем интересе даю свое согласие на обработку своих персональных данных, указанных при регистрации путем заполнения веб-формы на сайте, направляемой (заполненной) с использованием сайта.<br><br>
+            Под персональными данными я понимаю любую информацию, относящуюся ко мне как к Субъекту Персональных Данных, в том числе мои фамилию, имя, отчество, адрес, образование, профессию, контактные данные (телефон, факс, электронная почта, почтовый адрес), фотографии, иную другую информацию. Под обработкой персональных данных я понимаю сбор, систематизацию, накопление, уточнение, обновление, изменение, использование, распространение, передачу, в том числе трансграничную, обезличивание, блокирование, уничтожение, бессрочное хранение), и любые другие действия (операции) с персональными данными.<br><br>
+            Обработка персональных данных Субъекта Персональных Данных осуществляется исключительно в целях регистрации Субъекта Персональных Данных в базе данных с последующим направлением Субъекту Персональных Данных почтовых сообщений и смс-уведомлений, в том числе рекламного содержания, от компании, его аффилированных лиц и/или субподрядчиков, информационных и новостных рассылок и другой информации рекламно-новостного содержания.<br><br>
+            Датой выдачи согласия на обработку персональных данных Субъекта Персональных Данных является дата отправки регистрационной веб-формы с сайта.<br><br>
+            Обработка персональных данных Субъекта Персональных Данных может осуществляться с помощью средств автоматизации и/или без использования средств автоматизации в соответствии с действующим законодательством РФ и внутренними положениями.<br><br>
+            Компания принимает необходимые правовые, организационные и технические меры или обеспечивает их принятие для защиты персональных данных от неправомерного или случайного доступа к ним, уничтожения, изменения, блокирования, копирования, предоставления, распространения персональных данных, а также от иных неправомерных действий в отношении персональных данных, а также принимает на себя обязательство сохранения конфиденциальности персональных данных Субъекта Персональных Данных. Компания вправе привлекать для обработки персональных данных Субъекта Персональных Данных субподрядчиков, а также вправе передавать персональные данные для обработки своим аффилированным лицам, обеспечивая при этом принятие такими субподрядчиками и аффилированными лицами соответствующих обязательств в части конфиденциальности персональных данных.<br><br>
+            <span>Я ознакомлен(а), что:</span>
+            настоящее согласие на обработку моих персональных данных, указанных при регистрации на Сайте, направляемых (заполненных) с использованием Сайта, действует в течение 20 (двадцати) лет с момента регистрации на Сайте;
+            согласие может быть отозвано мною на основании письменного заявления в произвольной форме;
+            предоставление персональных данных третьих лиц без их согласия влечет ответственность в соответствии с действующим законодательством Российской Федерации.
+        </p>
+    </div>
+    <div class="modal__document modal">
+        <div class="modal__close"></div>
+        <img src="" alt="">
+    </div>
+    <div class="modal__callback modal">
+        <div class="modal__wrapper">
+            <div class="modal__close"></div>
+            <h2 class="modal__title">Оставьте свои данные</h2>
+            <p class="modal__subtitle">И специалист свяжется с вами в течение 15 минут</p>
+            <form action="" method="POST" name="callback-form" class="modal__form">
+                <input type="text" name="name" placeholder="Ваше имя*">
+                <input type="text" name="phone" placeholder="Телефон*">
+                <input type="submit" value="Перезвоните мне" class="modal__btn btn">
+            </form>
+            <p class="modal__policy-link">Нажимая данную кнопку вы соглашаетесь с <a href="#">пользовательским соглашением и политикой о конфиденциальности</a></p>
+        </div>
+    </div>
+    <div class="modal__mail modal">
+        <div class="modal__wrapper">
+            <div class="modal__close"></div>
+            <h2 class="modal__title">Оставьте сообщение</h2>
+            <p class="modal__subtitle">и мы оперативно ответим вам на email</p>
+            <form action="" method="POST" name="mail-form" class="modal__form">
+                <input type="text" name="name" placeholder="Ваше имя*">
+                <input type="text" name="email" placeholder="Ваш email*">
+                <textarea name="message" placeholder="Текст сообщения"></textarea>
+                <input type="submit" value="Получить ответ" class="modal__btn btn">
+            </form>
+            <p class="modal__policy-link">Нажимая данную кнопку вы соглашаетесь с <a href="#">пользовательским соглашением и политикой о конфиденциальности</a></p>
+        </div>
+    </div>
+    <section class="header" style="background: url(img/header-bg.jpg) center/cover no-repeat;">
+        <div class="wrapper">
+            <div class="header__mobile-header">
+                <div class="mobile-header__left">
+                    <a href="tel:" class="mobile-header__phone">
+                        <div class="icon"></div>
+                    </a>
+                    <a href="mailto:" class="mobile-header__email">
+                        <div class="icon"></div>
+                    </a>
+                </div>
+                <div class="mobile-header__center">
+                    <div class="mobile-header__logo"></div>
+                    <div class="mobile-header__labels">
+                        <a href="/" class="mobile-header__title">ЭкспертТехСтрой</a>
+                        <div class="mobile-header__subtitle">Строительная экспертиза</div>
+                    </div>
+                </div>
+                <div class="mobile-header__burger burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mobile-menu">
+                    <div class="mobile-menu__top-labels">
+                        <div class="mobile-menu__labels">
+                            <a href="/" class="mobile-menu__title">ЭкспертТехСтрой</a>
+                            <div class="mobile-menu__subtitle">Строительная экспертиза</div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="services-item"><a href="#">Услуги</a></li>
+                        <li class="advantages-item"><a href="#">Преимущества</a></li>
+                        <li class="deadlines-item"><a href="#">Сроки проведения</a></li>
+                        <li class="contacts-item"><a href="#">Контакты</a></li>
+                    </ul>
+                    <div class="mobile-menu__added-icons">
+                        <a href="mailto:" class="added-icons__email">
+                            <div class="icon"></div>
+                            <p>example@example.ru</p>
+                        </a>
+                        <a href="tel:" class="added-icons__phone">
+                            <div class="icon"></div>
+                            <p>+7 000 000 00 00</p>
+                        </a>
+                        <a href="viber://add?number=" class="icon viber"></a>
+                        <a href="whatsapp://send?phone=+" class="icon whatsapp"></a>
+                        <a href="#" class="icon youtube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__top-menu">
+                <div class="top-menu__left-side">
+                    <div class="left-side__logo"></div>
+                    <a href="/" class="left-side__title">ЭкспертТехСтрой</a>
+                    <div class="left-side__subtitle">Строительная экспертиза</div>
+                </div>
+                <div class="top-menu__menu">
+                    <ul>
+                        <li class="services-item">
+                            <a href="#" class="menu__item">Услуги</a>
+                        </li>
+                        <li class="advantages-item">
+                            <a href="#" class="menu__item">Преимущества</a>
+                        </li>
+                        <li class="deadlines-item">
+                            <a href="#" class="menu__item">Сроки проведения</a>
+                        </li>
+                        <li class="contacts-item">
+                            <a href="#" class="menu__item">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-menu__right-side">
+                    <a href="tel:" class="right-side__phone">
+                        <div class="icon"></div>
+                        <p>+7 927 222 45 75</p>
+                    </a>
+                    <a href="mailto:" class="right-side__email">
+                        <div class="icon"></div>
+                        <p>info@e-ts.ru</p>
+                    </a>
+                    <a href="viber://add?number=" class="icon viber"></a>
+                    <a href="whatsapp://send?phone=+" class="icon whatsapp"></a>
+                    <a href="#" class="right-side__youtube"></a>
+                </div>
+            </div>
+            <div class="header__content">
+                <h1>Независимая строительная экспертиза для юридических и физических лиц</h1>
+                <p>Решение судебных споров в пользу нашего заказчика в 99% случаев</p>
+            </div>
+            <a href="#" class="header__calculate-btn btn">Рассчитать стоимость</a><a href="#" class="more-btn">Подробнее об услугах</a>
+            <div class="header__other-buttons">
+                <a href="#" class="write-btn btn"><span class="icon"></span>Напишите нам</a>
+                <a href="#" class="call-btn btn"><span class="icon"></span>Заказать звонок</a>
+            </div>
+        </div>
+    </section>
+    <section class="works">
+        <div class="wrapper">
+            <h2 class="works__title title">Выполняем работы по обследованию и экспертизе</h2>
+            <div class="works__table">
+                <div class="table__item">
+                    <div class="item__head">
+                        <p>Зданий, сооружений, объектов незавершенного строительства</p>
+                    </div>
+                    <div class="item__body">
+                        <div class="item__pic" style="background: url(img/works1.jpg) center / cover no-repeat;"></div>
+                        <div class="item__info">
+                            <p class="info__title">Экспертиза установит:</p>
+                            <ul>
+                                <li>Качество применяемых материалов и возводимых конструкций</li>
+                                <li>Степень износа зданий и сооружений</li>
+                                <li>Соответствие ГОСТам, санитарно-эпидемиологическим и другим требованиям нормативной документации, действующей не территории РФ</li>
+                                <li>Необходимость ремонта, реконструкции или сноса здания</li>
+                                <li>Стоимость работ по приведению здания в безопасное для эксплуатации состояние</li>
+                                <li>Состояние инженерных коммуникаций</li>
+                            </ul>
+                            <a href="#" class="works__calculate-btn btn">Рассчитать стоимость</a>
+                            <div class="info__close">Свернуть <span class="icon"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__item">
+                    <div class="item__head">
+                        <p>Частных домов и квартир</p>
+                    </div>
+                    <div class="item__body">
+                        <div class="item__pic" style="background: url(img/works2.jpg) center / cover no-repeat;"></div>
+                        <div class="item__info">
+                            <p class="info__title">Экспертиза установит:</p>
+                            <ul>
+                                <li>Качество фасадов, стен и перекрытий, Наличие неровностей стен, полов</li>
+                                <li>Правильности отдельных конструкций на соответствие проекту, обязательным к применению строительным нормам и правилам, технологии строительства</li>
+                                <li>Объемы выполненных строительных работ и их стоимость</li>
+                                <li>Качество ремонтно-отделочных работ </li>
+                                <li>Качество монтажа окон и остекления балкона, дверных блоков и их монтажа</li>
+                                <li>Качество сантехники и ее монтажа</li>
+                            </ul>
+                            <a href="#" class="works__calculate-btn btn">Рассчитать стоимость</a>
+                            <div class="info__close">Свернуть <span class="icon"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__item">
+                    <div class="item__head">
+                        <p>Строительных и отделочных работ</p>
+                    </div>
+                    <div class="item__body">
+                        <div class="item__pic" style="background: url(img/works3.jpg) center / cover no-repeat;"></div>
+                        <div class="item__info">
+                            <p class="info__title">Экспертиза установит:</p>
+                            <ul>
+                                <li>Качество возведения несущих конструкций здания или сооружения</li>
+                                <li>Наличие или отсутствие дефектов кровли, фундаментов, стен, перекрытий.
+                                </li>
+                            </ul>
+                            <a href="#" class="works__calculate-btn btn">Рассчитать стоимость</a>
+                            <div class="info__close">Свернуть <span class="icon"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__item">
+                    <div class="item__head">
+                        <p>Строительных материалов</p>
+                    </div>
+                    <div class="item__body">
+                        <div class="item__pic" style="background: url(img/works4.jpg) center / cover no-repeat;"></div>
+                        <div class="item__info">
+                            <p class="info__title">Экспертиза установит:</p>
+                            <ul>
+                                <li>Марку использованных строительных материалов</li>
+                                <li>Качество использованных при строительстве материалов</li>
+                                <li>Стоимость и количество использованных материалов</li>
+                                <li>Соответствие использованных материалов проектно-сметной документации
+                                </li>
+                            </ul>
+                            <a href="#" class="works__calculate-btn btn">Рассчитать стоимость</a>
+                            <div class="info__close">Свернуть <span class="icon"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__item">
+                    <div class="item__head">
+                        <p>Сметной и проектной документации</p>
+                    </div>
+                    <div class="item__body">
+                        <div class="item__pic" style="background: url(img/works5.jpg) center / cover no-repeat;"></div>
+                        <div class="item__info">
+                            <p class="info__title">Экспертиза установит:</p>
+                            <ul>
+                                <li>Правильность составления исполнительной документации и соответствие ее нормам и регламентам</li>
+                                <li>Достаточность исполнительной документации
+                                </li>
+                            </ul>
+                            <a href="#" class="works__calculate-btn btn">Рассчитать стоимость</a>
+                            <div class="info__close">Свернуть <span class="icon"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__item">
+                    <div class="item__head">
+                        <p>Инженерных коммуникаций</p>
+                    </div>
+                    <div class="item__body">
+                        <div class="item__pic" style="background: url(img/works6.jpg) center / cover no-repeat;"></div>
+                        <div class="item__info">
+                            <p class="info__title">Экспертиза установит:</p>
+                            <ul>
+                                <li>Качество системы отопления, вентиляции, водоснабжения, водоотведения, канализации.</li>
+                            </ul>
+                            <a href="#" class="works__calculate-btn btn">Рассчитать стоимость</a>
+                            <div class="info__close">Свернуть <span class="icon"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="advantages">
+        <div class="wrapper">
+            <h2 class="advantages__title title">Работаем в строительной отрасли более 17 лет</h2>
+            <p class="advantages__text">
+                7 лет специализируемся на решении спорных вопросов строительства и применении строительных норм и правил. Все эксперты компании «ЭкспертТехСтрой» являются инженерами с высшим строительным образованием и опытом работы на строительных объектах от 10 лет
+            </p>
+        </div>
+    </section>
+    <section class="advantages-table">
+        <div class="wrapper">
+            <div class="advantages-table__table">
+                <div class="table__item">
+                    <span class="item__title">Скорость</span>
+                    <p class="item__text">
+                        от 3 дней на выдачу заключения
+                    </p>
+                </div>
+                <div class="table__item">
+                    <span class="item__title">Качество</span>
+                    <p class="item__text">
+                        Наши Технические заключения (экспертизы) принимают суды Российской Федерации всех инстанций
+                    </p>
+                </div>
+                <div class="table__item">
+                    <span class="item__title">Независимость</span>
+                    <p class="item__text">
+                        Эксперты являются незаинтересованными лицами
+                    </p>
+                </div>
+                <div class="table__item">
+                    <span class="item__title">Цены</span>
+                    <p class="item__text">
+                        Честное ценообразование по договору, без скрытых и дополнительных платежей
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services">
+        <div class="wrapper">
+            <h2 class="services__title title">Наши услуги</h2>
+            <div class="services__table">
+                <div class="table__item">
+                    <span class="item__title">Строительная экспертиза</span>
+                    <p class="item__text">
+                        Осуществляем независимую строительно-техническую экспертизу для суда, экспертизу строительных объектов и недвижимости, экспертизу строительно-монтажных работ.
+                    </p>
+                </div>
+                <div class="table__item">
+                    <span class="item__title">Технические обследования</span>
+                    <p class="item__text">
+                        Выполняем обследование технического состояния зданий и сооружений, техническое обследование строительных конструкций, объектов и коммуникаций, фундамента и бетона.
+                    </p>
+                </div>
+                <div class="table__item">
+                    <span class="item__title">Строительный контроль</span>
+                    <p class="item__text">
+                        Проводим технический надзор (строительный контроль) за строительством и обеспечиваем ввод объекта в эксплуатацию в срок.
+                    </p>
+                </div>
+                <div class="table__item">
+                    <span class="item__title">Аудит выполненных строительных работ</span>
+                    <p class="item__text">
+                        Проверяем качество произведенных строительных работ, соответствие выполненных работ проектным решениям, аудит фактически применяемых на объекте строительных материалов.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="questions">
+        <div class="wrapper">
+            <h2 class="questions__title title">Когда нужна строительная экспертиза</h2>
+            <div class="questions__right-block">
+                <div class="right-block__annotation">Информацию, о наиболее частых нарушениях в сфере строительства смотрите на нашем youtube–канале</div>
+                <div class="right-block__video">
+                    <a class="video__video" href="#" style="background: url(img/image.jpg) 0 0 / cover no-repeat;"></a>
+                    <div class="video__labels">
+                        <span class="labels__author">Среда Валеева</span>
+                        <span class="labels__title">Не дай себя обмануть</span>
+                    </div>
+                </div>
+            </div>
+            <ul class="questions__list">
+                <li>При сдаче/приёмке строительных работ</li>
+                <li>В спорных ситуациях между заказчиком и подрядчиком</li>
+                <li>При выявлении строительных дефектов в процессе эксплуатации объектов</li>
+                <li>При определении стоимости нанесенного ущерба в результате залива или пожара</li>
+            </ul>
+        </div>
+    </section>
+    <section class="deadlines">
+        <div class="wrapper">
+            <h2 class="deadlines__title title">Сроки проведения экспертизы</h2>
+            <div class="deadlines__table">
+                <div class="table__item">
+                    <span class="item__title">Расчёт стоимости работ и выезд на объект</span>
+                    <span class="item__text">В день обращения</span>
+                </div>
+                <div class="table__item">
+                    <span class="item__title">Выдача технического заключения</span>
+                    <span class="item__text">от 3 дней в зависимости от сложности экспертизы и объёмов обследуемого объекта</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="calculating">
+        <div class="wrapper">
+            <h2 class="calculating__title title">Рассчитать стоимость проведения экспертизы</h2>
+            <form class="calculating__form" action="" method="POST">
+                <p class="first-col">
+                    <input type="text" name="name" placeholder="Ваше имя*">
+                    <input type="text" name="phone" placeholder="Телефон*">
+                    <input type="text" name="email" placeholder="Email*">
+                </p>
+                <p class="second-col">
+                    <input type="text" name="region" placeholder="Регион*">
+                    <textarea name="message" placeholder="Примечание"></textarea>
+                </p>
+                <p class="bottom-inputs">
+                    <label class="attach-btn" for="files">Прикрепить документы</label>
+                    <input id="files" type="file" multiple name="files">
+                    <span class="files-counter"></span>
+                    <input type="submit" name="calculate-btn" value="Рассчитать стоимость" class="btn">
+                </p>
+            </form>
+        </div>
+    </section>
+    <section class="documents">
+        <div class="wrapper">
+            <h2 class="documents__title title">Наши документы</h2>
+            <div class="documents__slider owl-carousel owl-theme">
+                <div class="slider__item">
+                    <a href="" alt="">
+                        <img src="img/docs/Выписка 319.19_Страница_1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="slider__item">
+                    <a href="" alt="">
+                        <img src="img/docs/Выписка 319.19_Страница_1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="slider__item">
+                    <a href="" alt="">
+                        <img src="img/docs/СРО ГЕО.jpg" alt="">
+                    </a>
+                </div>
+                <div class="slider__item">
+                    <a href="" alt="">
+                        <img src="img/docs/СРО ГЕО (2).jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="documents__slider-nav">
+                <div class="slider-nav__prev nav"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+                <div class="slider-nav__next nav"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+            </div>
+        </div>
+    </section>
+    <section class="objects">
+        <div class="wrapper">
+            <h2 class="objects__title title">Выполненные объекты</h2>
+            <div class="objects__slider owl-carousel owl-theme">
+                <div class="objects__slide">
+                    <img src="img/object.jpg" alt="">
+                    <div class="slide__info">
+                        <span class="info__title">ОАО "РЖД"</span>
+                        <span class="info__desc">экспертиза недостроенного строения</span>
+                    </div>
+                </div>
+                <div class="objects__slide">
+                    <img src="img/object.jpg" alt="">
+                    <div class="slide__info">
+                        <span class="info__title">ОАО "РЖД"</span>
+                        <span class="info__desc">экспертиза недостроенного строения</span>
+                    </div>
+                </div>
+                <div class="objects__slide">
+                    <img src="img/object.jpg" alt="">
+                    <div class="slide__info">
+                        <span class="info__title">ОАО "РЖД"</span>
+                        <span class="info__desc">экспертиза недостроенного строения</span>
+                    </div>
+                </div>
+                <div class="objects__slide">
+                    <img src="img/object.jpg" alt="">
+                    <div class="slide__info">
+                        <span class="info__title">ОАО "РЖД"</span>
+                        <span class="info__desc">экспертиза недостроенного строения</span>
+                    </div>
+                </div>
+            </div>
+            <div class="objects__slider-nav">
+                <div class="slider-nav__prev nav"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+                <div class="slider-nav__next nav"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts">
+        <form action="" method="POST" class="questions-form">
+            <h2>Остались вопросы?</h2>
+            <p class="questions-form__subtitle">Задайте их нашему специалисту и получите ответ в течение 15 минут</p>
+            <input type="text" name="name" placeholder="Ваше имя">
+            <input type="text" name="phone" placeholder="Телефон">
+            <textarea name="message" id="" placeholder="Сообщение"></textarea>
+            <input type="submit" name="question-btn" value="Задать вопрос" class="btn">
+            <p class="questions-form__policy">Нажимая данную кнопку вы соглашаетесь с <a href="#">пользовательским соглашением и политикой о конфиденциальности</a></p>
+        </form>
+        <div class="contacts__location active">
+            <div class="location__close"></div>
+            <h2 class="location__title">Мы находимся в Москве</h2>
+            <p class="location__worktime">Работаем с 9:00 до 22:00 <span>без выходных</span></p>
+            <a href="tel:" class="location__phone">+7 000 000 00 00</a><span class="location__icons"><a href="whatsapp://send?phone=+" class="icon whatsapp"></a><a href="viber://add?number=" class="icon viber"></a></span>
+            <a href="mailto:" class="location__email">example@example.ru</a>
+            <p class="location__address">г. Москва, ул. Москва, д.1</p>
+        </div>
+        <div class="contacts__subscribe">
+            <a href="#">Подписывайтесь на наш youtube–канал!</a>
+        </div>
+        <div id="map"></div>
+    </section>
+    <section class="footer">
+        <div class="wrapper">
+            <div class="footer__item">&#169;2019 ЭкспертТехСтрой<br>Все права защищены</div>
+            <div class="footer__item"><a href="#" class="policy">Пользовательское соглашение и политика конфиденциальности</a></div>
+            <div class="footer__item">
+                <div class="asap-logo"></div>
+                <p>Разработка сайта — <br><a href="https://asap-ag.ru/" target="_blank">digital–агентство ASAP</a></p>
+            </div>
+        </div>
+    </section>
 </body>
 <script src="vendors/js/jquery-3.4.1.min.js"></script>
 <script src="vendors/js/owl.carousel.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?apikey=0ed14387-23d4-4710-97c7-2233e3143272&lang=ru_RU" type="text/javascript"></script>
+<script src="vendors/js/simpleLightbox.min.js"></script>
 <script src="js/scripts.js"></script>
+
 </html>

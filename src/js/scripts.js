@@ -117,8 +117,8 @@ $(function(){
 			}
 		}
 	});
-
-	$('.documents__nav').owlCarousel({
+	if($(window).width() <= 768) {
+		$('.documents__slider').owlCarousel({
 		navText: [$('.documents__slider-nav .slider-nav__prev'), $('.documents__slider-nav .slider-nav__next')],
 		margin: 30,
 		dots: false,
@@ -130,20 +130,18 @@ $(function(){
 				items: 1,
 				margin: 20
 			},
-			680: {
+			480: {
 				items: 2,
-				margin: 30
-			},
-			834: {
-				items: 2,
-				margin: 30
-			},
-			1240: {
-				items: 4,
 				margin: 30
 			}
 		}
 	});
+	}
+
+	if($('.slider__item a').length > 0) {
+		$('.slider__item a').simpleLightbox();
+	}
+	
 
 	$('.overlay').on('click', function() {
 		hideModal($('.modal'));
